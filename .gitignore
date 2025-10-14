@@ -1,0 +1,69 @@
+# ==============================
+# 🐍 Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# ==============================
+# 🧬 Environnements virtuels
+# ==============================
+.venv/
+venv/
+env/
+.env
+
+# ==============================
+# 🧾 Logs / caches
+# ==============================
+logs/
+*.log
+.pytest_cache/
+
+# ==============================
+# 💻 IDE / OS
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+
+# ==============================
+# 📦 Données / poids lourds
+# ==============================
+data/
+outputs/
+checkpoints/
+
+# ==============================
+# 🤖 ROS2
+# ==============================
+*.bag
+*.bag.active
+
+# ==============================
+# 🧩 Isaac Sim / USD assets
+# ==============================
+*.usd
+*.usda
+*.usdc
+
+# ==============================
+# 🚫 Exclure le SDK externe Unitree
+# ==============================
+unitree_sdk2_python/
+
+# ==============================
+# 🧱 Exclure certains fichiers de deploy_real
+# (garde seulement ce que tu veux)
+# ==============================
+
+
+# Exemple si tu veux ignorer tout sauf quelques fichiers :
+deploy_real/*
+!deploy_real/common
+!deploy_real/configs
+!deploy_real/config.py
+!deploy_real/deploy_real_isaaclab.py
+!deploy_real/node_kalman.py
+
+
