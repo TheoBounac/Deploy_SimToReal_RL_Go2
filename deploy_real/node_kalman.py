@@ -4,10 +4,10 @@ from nav_msgs.msg import Odometry
 import deploy_real.deploy_real_isaaclab as deploy_real_isaaclab
 import sys
 
-###### Pour diriger le path vers la ou es stocke unitree_sd2k_python ######
+######### To point the path to where unitree_sdk2_python is stored ########
 sys.path.append('.')                                                      #
 sys.path.append('..')                                                     #
-sys.path.append('/home/theo/deploy/unitree_sdk2_python')                  #
+sys.path.append('/home/theo/deploy/unitree_sdk2_python') # TO MODIFY !!!  #
 ###########################################################################
 
 from unitree_sdk2_python.unitree_sdk2py.idl.unitree_go.msg.dds_ import LowState_ as LowStateGo
@@ -21,7 +21,7 @@ class KalmanOdomListener(Node):
         super().__init__('kalman_odom_listener')
         self.subscription = self.create_subscription(
             Odometry,
-            '/odometry/filtered',    # topic publié par inekf_odom.py
+            '/odometry/filtered',    # topic published by inekf_odom.py
             self.listener_callback,
             10
         )
@@ -35,7 +35,7 @@ class KalmanOdomListener(Node):
         self.timer = self.create_timer(0.005, self.publish_lowstate)
         
     def listener_callback(self, msg):
-        # vitesses linéaires estimées
+        # Estimated Vx,Vy,VZ by the Kalman Filter
         if deploy_real_isaaclab.base_lin_vel_input is not None:
             print("listener_callback")
             print("msg.twist.twist.linear",msg.twist.twist.linear)
@@ -45,7 +45,7 @@ class KalmanOdomListener(Node):
             base_lin_vel_input[2] = msg.twist.twist.linear.z
             base_lin_vel_input[3] = msg.twist.twist.angular.z
     
-
+    # This function transforms the lowstate msg receive by deploy_real_isaaclab.py to the Lowstate standard format
     def publish_lowstate(self):
         if msg is not None:
             ros_msg = LowStateRos()
