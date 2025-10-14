@@ -1,4 +1,4 @@
-# 🐾 Deploy Sim-to-Real Go2 with Python
+# 🐾 Deploy Sim-to-Real RL model on Go2 with Python
 
 Ce dépôt contient :
 - `deploy_real/` → scripts de déploiement pour le robot Go2 dans l'environnement réel ou simulé (IsaacLab)
