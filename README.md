@@ -101,7 +101,8 @@ et **non à l’intérieur** :
 
 ---
 
-## 🚀 Utilisation
+
+<h2 align="center">🚀 Utilisation 🚀</h2> 
 
 1. Active ton environnement Python :
    ```bash
@@ -119,19 +120,19 @@ et **non à l’intérieur** :
 
 ---
 
-## 🔗 Liens utiles
+##  Liens utiles
 
 | 🔗 Ressource | 📍 Lien |
 |--------------|---------|
-| 🧩 **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
-| 🤖 **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
-| 🐾 **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
+|  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
+|  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
+|  **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
 
 
 ---
 
 
-## 👨‍💻 Auteur
+##  Auteur
 
 **Théo Bounaceur**  
 Laboratoire **LORIA (CNRS / Université de Lorraine)**  
