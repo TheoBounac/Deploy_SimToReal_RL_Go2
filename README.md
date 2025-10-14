@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Aperçu général
+## Aperçu général
 
 Ce projet met en place une chaîne **Sim-to-Real** complète :
 - 🎮 **Simulation IsaacLab** pour l’entraînement des politiques RL  
