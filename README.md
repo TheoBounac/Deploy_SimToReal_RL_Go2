@@ -51,7 +51,8 @@ Isaaclab
 
 ---
 
-##  🔧 Installation complète
+<h2 align="center">🔧 Installation complète</h2>
+
 
 ###  1️⃣ Créer un workspace
 
