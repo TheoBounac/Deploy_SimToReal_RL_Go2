@@ -137,7 +137,7 @@ et **non à l’intérieur** :
 **Théo Bounaceur**  
 Laboratoire **LORIA (CNRS / Université de Lorraine)**  
 🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
-📫 Contact : [theo.bounaceur@loria.fr](https://www.youtube.com/)
+📫 Contact : theo.bounaceur@loria.fr
 
 ---
 
