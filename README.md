@@ -101,8 +101,8 @@ Tester le modèle :
 ###  3️⃣ Créer un workspace
 Crée un répertoire principal qui contiendra tout le projet :
 ```bash
-mkdir ~/Deploy_RL_Model_Go2
-cd ~/Deploy_RL_Model_Go2
+mkdir ~/deploy_go2
+cd ~/deploy_go2
 ```
 
 
