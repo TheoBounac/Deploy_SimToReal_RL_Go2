@@ -56,6 +56,32 @@ Isaaclab
 <h2 align="center">🔧 Installation complète 🔧</h2> 
 
 
+###  1️⃣ Créer un env conda
+
+Crée un environnement conda pour le projet:
+
+```bash
+conda create -n env_isaaclab python=3.11
+conda activate env_isaaclab
+```
+
+---
+
+Ensure the latest pip version is installed. To update pip, run the following command from inside the virtual environment:
+
+```bash
+pip install --upgrade pip
+```
+
+---
+
+Install a CUDA-enabled PyTorch 2.7.0 build for CUDA 12.8:
+```bash
+pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
+```
+
+---
+
 ###  1️⃣ Créer un workspace
 
 Crée un répertoire principal qui contiendra tout le projet :
