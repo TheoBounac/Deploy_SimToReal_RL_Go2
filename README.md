@@ -17,8 +17,8 @@ Le projet combine **Python + ROS 2 + IsaacLab**, permettant d'entraîner, tester
 
 ---
 
-## 📁 Structure du dépôt
-
+## 📁 Structure du projet
+Voici une vue d’ensemble du projet et de son architecture finale :
 ```
 Deploy_Model_Go2/
 │
