@@ -79,6 +79,12 @@ pip install isaaclab[isaacsim,all]==2.2.0 --extra-index-url https://pypi.nvidia.
 Make sure that your virtual environment is activated. Check that the simulator runs as expected :
 ```bash
 isaacsim
+
+```
+Lancer un entrainement du go2 :
+```bash
+cd isaaclab
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4080  --max_iterations 9999 --headless
 ```
 
 ---
