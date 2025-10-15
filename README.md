@@ -72,7 +72,9 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 
 ---
 ###  2️⃣ Installer Isaaclab
-Cette partie est optionnelle, elle permet d'entraîner sois-même des modèles de RL. Des modèles pré-entraînés sont déja disponibles dans `Deploy_SimToReal_Go2`Pour installer Isaaclab, vous pouvez vous référer au [guide isaaclab](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html).
+Cette partie est optionnelle, elle permet d'entraîner sois-même des modèles de RL. Des modèles pré-entraînés sont déja disponibles dans `pre_train`. 
+
+Pour installer Isaaclab, vous pouvez vous référer au [guide isaaclab](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html).
 Les commandes importantes sont rappelées ci-dessous.
 
 Install the Isaac Lab packages along with Isaac Sim :
