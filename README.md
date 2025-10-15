@@ -71,7 +71,15 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 ```
 
 ---
-###  1️⃣ Créer un workspace
+###  2️⃣ Installer Isaaclab
+Crée un répertoire principal qui contiendra tout le projet :
+```bash
+mkdir ~/Deploy_RL_Model_Go2
+cd ~/Deploy_RL_Model_Go2
+```
+
+---
+###  3️⃣ Créer un workspace
 Crée un répertoire principal qui contiendra tout le projet :
 ```bash
 mkdir ~/Deploy_RL_Model_Go2
@@ -80,7 +88,7 @@ cd ~/Deploy_RL_Model_Go2
 
 
 ---
-###  2️⃣ Cloner le projet principal
+###  4️⃣ Cloner le projet principal
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
 cd Deploy_SimToReal_Go2
@@ -88,18 +96,19 @@ cd Deploy_SimToReal_Go2
 
 
 ---
-###  3️⃣ Cloner le SDK Unitree (à l’intérieur du projet)
+###  5️⃣ Cloner le SDK Unitree (à l’intérieur du projet)
 ```bash
 git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 ```
 
 
 ---
-###  4️⃣ Télécharger IsaacLab (à côté du projet)
+###  6️⃣ Télécharger IsaacLab (à côté du projet)
 ```bash
 cd ..
 git clone https://github.com/isaac-sim/IsaacLab.git
 ```
+1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
 
 
 🧭 **Attention :**
