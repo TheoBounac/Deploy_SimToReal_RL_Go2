@@ -51,7 +51,7 @@ class Controller():
 
         # [Etape] 1. LOADING POLICY
         print("3] ---> CHARGEMENT DE LA POLITIQUE")
-        self.policy = torch.jit.load("/home/theo/deploy/pre_train/go2/policy_new_new_1.pt")
+        self.policy = torch.jit.load("/home/theo/deploy/pre_train/go2/policy_rough_2.pt")
 
         # Initialization of variables for startup
         self.defaut_isaac = [0.1, -0.1, 0.1, -0.1, 0.8, 0.8, 1, 1, -1.5, -1.5, -1.5, -1.5] # Default angles for Isaac’s convention (the one used by the policy)
