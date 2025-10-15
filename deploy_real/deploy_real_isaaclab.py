@@ -174,7 +174,7 @@ class Controller():
     def wait_for_low_state(self):                                                                              #
         while self.low_state.tick == 0:                                                                        #
             time.sleep(self.config.control_dt)                                                                 #
-        print("         Connecté au robot")                                                                             #
+        print("         Connecté au robot")                                                                    #
     ############################################################################################################
 
 
@@ -182,10 +182,10 @@ class Controller():
     def LowStateGoHandler(self, msg: LowStateGo):                                                              #
         self.low_state = msg                                                                                   #
         self.remote_controller.set(self.low_state.wireless_remote)                                             #
-        node_kalman.msg = msg
+        node_kalman.msg = msg                                                                                  #
                                                                                                                #
     def SportStateMessageHandler(self, sport_state_msg):                                                       #
-        self.velocity = sport_state_msg.velocity  # Collecting the velocity                                    #                                                                                       #
+        self.velocity = sport_state_msg.velocity  # Collecting the velocity                                    #                                                                                       
     ############################################################################################################
 
 
@@ -212,7 +212,7 @@ class Controller():
 
 
     # Function that raises the robot to a standing position and keeps it there until the "A" button is pressed, which will start the model #
-    def move_to_default_pos(self):                                                                                                         #
+    def move_to_default_pos(self):                                                                                                         
         print("6] ------> LE ROBOT SE DEPLACE VERS LA DEFAULT POSE")                                                                    
         
         # Donnees
@@ -318,7 +318,7 @@ class Controller():
                 self.low_cmd.motor_cmd[i].tau = 0                                                   #
                 self.send_cmd(self.low_cmd)                                                         #
             time.sleep(0.002)                                                                       #
-        print("9] ---------> LE ROBOT EST ALLONGE")                                                  #
+        print("9] ---------> LE ROBOT EST ALLONGE")                                                 #
     #################################################################################################
 
 
@@ -473,8 +473,12 @@ class Controller():
 
         ########################################## Neural Network inputs :######## ############################################
         self.obs[:4]= [f0,f1,f2,f3]                                                                                           #
-        #self.obs[4:7]= [vx*2,vy*2,vz*2] #TO BE USED IF THE KALMAN FILTER DOESN’T WORK (MY VELOCITY ESTIMATION)                #
-        self.obs[4:7]= [node_kalman.base_lin_vel_input[0],node_kalman.base_lin_vel_input[1],node_kalman.base_lin_vel_input[2]]#
+                                                                                                                              #
+                                                                                                                              #
+        self.obs[4:7]= [vx*2,vy*2,vz*2] #TO BE USED IF THE KALMAN FILTER DOESN’T WORK (MY VELOCITY ESTIMATION)                #
+        #self.obs[4:7]= [node_kalman.base_lin_vel_input[0],node_kalman.base_lin_vel_input[1],node_kalman.base_lin_vel_input[2]]#
+                                                                                                                              #
+                                                                                                                              #
         self.obs[7:10] = ang_vel                                                                                              #
         self.obs[10:13] = gravity_orientation                                                                                 #
         self.obs[13:16] = self.cmd * self.config.cmd_scale * self.config.max_cmd                                              #
@@ -588,7 +592,7 @@ if __name__ == "__main__":
     ##################################################################################
 
 
-    ############### Visualization of data at the end of the experiment #####################
+    ############### Visualization of data at the end of the experiment #######################
     print("10] ----------> VISUALISATION DES DONNEES EN COURS")                              #
                                                                                              #
     # On crée une grille 4 lignes × 2 colonnes                                               #
