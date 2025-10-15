@@ -90,6 +90,11 @@ cd isaaclab
 ./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4080  --max_iterations 9999 --headless
 ```
 
+Tester le modèle :
+```bash
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/play.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4
+```
+
 ---
 ###  3️⃣ Créer un workspace
 Crée un répertoire principal qui contiendra tout le projet :
