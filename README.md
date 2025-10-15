@@ -1,4 +1,4 @@
- ##### <h2 align="center">DEPLOY SIM-TO-REAL RL MODEL ON Go2</h2>
+# <h2 align="center">DEPLOY SIM-TO-REAL RL MODEL ON Go2</h2>
 
 
 
