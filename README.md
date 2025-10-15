@@ -19,17 +19,18 @@ Voici une vue d’ensemble du projet et de son architecture finale :
 ```
 deploy_go2/
 │
-├── deploy_real/                # Scripts de déploiement sur le robot Go2 (réel/simulé)
+├── deploy_real/                # Scripts de déploiement sur le robot Go2 
 │   ├── config.py
 │   ├── deploy_real_isaaclab.py
 │   └── node_kalman.py
 │
 ├── pre_train/                  # Modèles RL pré-entraînés (policies)
-│   ├── go2/
-│   │   ├── policy_1.pt
-│   │   └── ...
+│   ├── policy_1.pt
+│   └── ...
 │
-├── unitree_sdk2_python/        # SDK Unitree (à cloner séparément)
+├── unitree_sdk2_python/        # SDK Unitree
+│
+├── go2_odometry/               # Filtre de Kalman pour le Go2
 │
 └── README.md                 
 
