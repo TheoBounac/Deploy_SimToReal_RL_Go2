@@ -17,7 +17,7 @@ Le projet combine **Python + ROS 2 + IsaacLab**, permettant d'entraîner, tester
 ## 📁 Structure du projet
 Voici une vue d’ensemble du projet et de son architecture finale :
 ```
-Deploy_Model_Go2/
+deploy_go2/
 │
 ├── deploy_real/                # Scripts de déploiement sur le robot Go2 (réel/simulé)
 │   ├── config.py
@@ -110,16 +110,22 @@ cd ~/deploy_go2
 ###  4️⃣ Cloner le projet principal
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
-cd Deploy_SimToReal_Go2
 ```
 
 
 ---
-###  5️⃣ Cloner le SDK Unitree (à l’intérieur du projet)
+###  5️⃣ Cloner le SDK Unitree 
+unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+
+Clone the repository using Git:
 ```bash
 git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 ```
-
+Navigate to the directory and install it:
+```bash
+cd unitree_sdk2_python
+pip install -e .
+```
 
 ---
 ###  6️⃣ Télécharger IsaacLab (à côté du projet)
