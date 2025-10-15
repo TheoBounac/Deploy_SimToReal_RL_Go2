@@ -1,6 +1,6 @@
 # 🤖🦿🐾 Deploy Sim-to-Real RL Model on Go2 
 
->  **Déploiement complet d’un modèle de Reinforcement Learning (RL) sur le robot quadrupède Unitree Go2**, en simulation (IsaacLab) et sur robot réel.
+>  **Déploiement d’un modèle de Reinforcement Learning (RL) sur le robot quadrupède Unitree Go2**, en simulation (IsaacLab) et sur robot réel.
 
 ---
 
