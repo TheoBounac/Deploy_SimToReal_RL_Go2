@@ -1,4 +1,5 @@
-<h2 align="center"><b>DEPLOY SIM-TO-REAL RL MODEL ON Go2</b></h2>
+<h2 align="center">**DEPLOY SIM-TO-REAL RL MODEL ON Go2**</h2>
+
 
 
 >  **Déploiement d’un modèle de Reinforcement Learning (RL) sur le robot quadrupède Unitree Go2**, en simulation (IsaacLab) et sur robot réel.
