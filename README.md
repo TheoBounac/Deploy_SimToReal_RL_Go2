@@ -5,7 +5,6 @@
 >  **Ce repository vise à entraîner un modèle de Reinforcement Learning (RL) sur le robot quadrupède Unitree Go2** en simulation (IsaacLab), et à le déployer sur le robot réel.
 
 ---
-
 ## Aperçu général
 
 Ce projet met en place une chaîne **Sim-to-Real** complète :
@@ -14,7 +13,6 @@ Ce projet met en place une chaîne **Sim-to-Real** complète :
 - 🔄 **Communication ROS 2** pour le contrôle en temps réel et l’intégration capteurs/commandes  
 
 Le projet combine **Python + ROS 2 + IsaacLab**, permettant d'entraîner, tester et transférer une politique RL vers le robot réel.
-
 ---
 
 ## 📁 Structure du projet
@@ -58,7 +56,7 @@ Isaaclab
 
 ###  1️⃣ Setup
 
-Crée un environnement conda pour le projet:
+Crée un environnement conda pour le projet :
 
 ```bash
 conda create -n env_isaaclab python=3.11
@@ -66,20 +64,17 @@ conda activate env_isaaclab
 ```
 
 ---
-
-Ensure the latest pip version is installed. To update pip, run the following command from inside the virtual environment:
+Ensure the latest pip version is installed. To update pip, run the following command from inside the virtual environment :
 
 ```bash
 pip install --upgrade pip
 ```
 
 ---
-
-Install a CUDA-enabled PyTorch 2.7.0 build for CUDA 12.8:
+Install a CUDA-enabled PyTorch 2.7.0 build for CUDA 12.8 :
 ```bash
 pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 ```
-
 ---
 
 ###  1️⃣ Créer un workspace
