@@ -25,7 +25,7 @@ deploy_go2/
 │   └── node_kalman.py
 │
 ├── pre_train/                  # Modèles RL pré-entraînés (policies)
-│   ├── policy_1.pt
+│   ├── policy_rough.pt
 │   └── ...
 │
 ├── unitree_sdk2_python/        # SDK Unitree
