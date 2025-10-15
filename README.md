@@ -128,26 +128,17 @@ pip install -e .
 ```
 
 ---
-###  6️⃣ Télécharger IsaacLab (à côté du projet)
+###  6️⃣ Cloner go2_odometry
 ```bash
 cd ..
-git clone https://github.com/isaac-sim/IsaacLab.git
+git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
-1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
+ 7️⃣ 8️⃣ 9️⃣ 🔟
 
 
-🧭 **Attention :**
-IsaacLab doit être placé **au même niveau** que `Deploy_SimToReal_Go2`,  
-et **non à l’intérieur** :
 
-```
-~/Deploy_RL_Model_Go2/
-├── Deploy_SimToReal_Go2/
-└── IsaacLab/
-```
 
 ---
-
 
 <h2 align="center">🚀 Utilisation 🚀</h2> 
 
