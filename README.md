@@ -143,6 +143,7 @@ git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 
 <h2 align="center">🚀 Utilisation 🚀</h2> 
 Une fois l'installation complétée, suivre ces étapes pour lancer un modèle RL sur le robot Go2. 
+
 1. Active ton environnement Python :
    ```bash
    conda activate env_isaaclab
