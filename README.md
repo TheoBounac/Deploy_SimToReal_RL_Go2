@@ -56,7 +56,7 @@ Isaaclab
 <h2 align="center">🔧 Installation complète 🔧</h2> 
 
 
-###  1️⃣ Créer un env conda
+###  1️⃣ Setup
 
 Crée un environnement conda pour le projet:
 
