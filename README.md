@@ -72,10 +72,13 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 
 ---
 ###  2️⃣ Installer Isaaclab
-Crée un répertoire principal qui contiendra tout le projet :
+Install the Isaac Lab packages along with Isaac Sim :
 ```bash
-mkdir ~/Deploy_RL_Model_Go2
-cd ~/Deploy_RL_Model_Go2
+pip install isaaclab[isaacsim,all]==2.2.0 --extra-index-url https://pypi.nvidia.com
+```
+Make sure that your virtual environment is activated. Check that the simulator runs as expected :
+```bash
+isaacsim
 ```
 
 ---
