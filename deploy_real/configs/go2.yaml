@@ -4,7 +4,7 @@ imu_type: "pelvis" # "torso" or "pelvis"
 lowcmd_topic: "rt/lowcmd"     # topic to publish command for the go2 robot 
 lowstate_topic: "rt/lowstate" # topic to collect the data from the robot
 
-policy_path: "../../pre_train/policy_rough.pt" # "/home/theo/deploy/pre_train/go2/policy.pt"
+policy_path: "policy_rough.pt" 
 
 leg_joint2motor_idx: [3,0,9,6,4,1,10,7,5,2,11,8]                                # Conversion of the motors between isaaclab convention and the real go2 robot
 default_angles: [-0.1,  0.8, -1.5, 0.1, 0.8, -1.5, -0.1, 1, -1.5, 0.1, 1, -1.5]

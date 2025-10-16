@@ -1,16 +1,13 @@
 ############ LIBRARIES #############
-from typing import Union           #
 import numpy as np                 #
 import time                        #
 import torch                       #
 import sys                         #
 import numpy as np                 #
 import matplotlib.pyplot as plt    #
-import pandas as pd                #
 from math import *                 #
 import rclpy                       #
-from rclpy.node import Node        #
-from geometry_msgs.msg import Twist#
+from pathlib import Path           #
 ####################################
 
 ######### To point the path to where unitree_sdk2_python is stored ########
@@ -39,6 +36,10 @@ from common.remote_controller import RemoteController, KeyMap
 from deploy_real.configs.config import Config
 #import deploy_real.node_kalman as node_kalman
 
+# Get the current folder (the one where this file is located)
+current_dir = Path(__file__).resolve()
+project_root = current_dir.parents[1]   
+
 
 class Controller():
     def __init__(self, config: Config) -> None:
@@ -50,7 +51,8 @@ class Controller():
 
         # [Etape] 1. LOADING POLICY
         print("3] ---> CHARGEMENT DE LA POLITIQUE")
-        self.policy = torch.jit.load(config.policy_path) #torch.jit.load("/home/theo/deploy/pre_train/go2/policy_rough_2.pt")
+        policy_path = project_root / "pre_train" / config.policy_path
+        self.policy = torch.jit.load(policy_path) 
         
         # Initialization of variables for startup
         self.defaut_isaac = [0.1, -0.1, 0.1, -0.1, 0.8, 0.8, 1, 1, -1.5, -1.5, -1.5, -1.5] # Default angles for Isaac’s convention (the one used by the policy)
