@@ -92,7 +92,7 @@ The first run will prompt users to accept the Nvidia Omniverse License Agreement
 By installing or using Isaac Sim, I agree to the terms of NVIDIA OMNIVERSE LICENSE AGREEMENT (EULA)
 in https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html
 
-Do you accept the EULA? (Yes/No): Yes
+Do you accept the EULA ? (Yes/No): Yes
 ```
 Cela devrait prendre quelque minutes pour la première run.
 
