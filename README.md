@@ -120,8 +120,8 @@ cd ~/deploy_go2
 ###  4️⃣ Cloner le projet principal
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
+cd ~/Deploy_SimToReal_Go2
 ```
-
 
 ---
 ###  5️⃣ Cloner le SDK Unitree 
