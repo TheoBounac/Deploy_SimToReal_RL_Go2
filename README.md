@@ -85,8 +85,17 @@ pip install isaaclab[isaacsim,all]==2.2.0 --extra-index-url https://pypi.nvidia.
 Make sure that your virtual environment is activated. Check that the simulator runs as expected :
 ```bash
 isaacsim
-
 ```
+
+The first run will prompt users to accept the Nvidia Omniverse License Agreement. To accept the EULA, reply `Yes` when prompted with the below message:
+```bash
+By installing or using Isaac Sim, I agree to the terms of NVIDIA OMNIVERSE LICENSE AGREEMENT (EULA)
+in https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html
+
+Do you accept the EULA? (Yes/No): Yes
+```
+Cela devrait prendre quelque minutes pour la première run.
+
 Lancer un entrainement du go2 :
 ```bash
 cd isaaclab
