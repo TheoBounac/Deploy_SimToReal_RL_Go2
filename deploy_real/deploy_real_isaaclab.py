@@ -8,7 +8,6 @@ import numpy as np                 #
 import matplotlib.pyplot as plt    #
 import pandas as pd                #
 from math import *                 #
-import pygame                      #
 import rclpy                       #
 from rclpy.node import Node        #
 from geometry_msgs.msg import Twist#
@@ -38,7 +37,7 @@ from common.command_helper import create_damping_cmd, create_zero_cmd, init_cmd_
 from common.rotation_helper import get_gravity_orientation, transform_imu_data
 from common.remote_controller import RemoteController, KeyMap
 from deploy_real.configs.config import Config
-import deploy_real.node_kalman as node_kalman
+#import deploy_real.node_kalman as node_kalman
 
 
 class Controller():
@@ -113,11 +112,11 @@ class Controller():
         import threading                                                                    #
                                                                                             #
         rclpy.init()                                                                        #
-        KOL = node_kalman.KalmanOdomListener()                                              #
+        #KOL = node_kalman.KalmanOdomListener()                                              #
                                                                                             #
         # MultiThreadedExecutor                                                             #
         executor = MultiThreadedExecutor()                                                  #
-        executor.add_node(KOL)                                                              #
+        #executor.add_node(KOL)                                                              #
                                                                                             #
         # Lance l'exécuteur dans un thread                                                  #
         threading.Thread(target=executor.spin, daemon=True).start()                         #
@@ -182,7 +181,7 @@ class Controller():
     def LowStateGoHandler(self, msg: LowStateGo):                                                              #
         self.low_state = msg                                                                                   #
         self.remote_controller.set(self.low_state.wireless_remote)                                             #
-        node_kalman.msg = msg                                                                                  #
+        #node_kalman.msg = msg                                                                                  #
                                                                                                                #
     def SportStateMessageHandler(self, sport_state_msg):                                                       #
         self.velocity = sport_state_msg.velocity  # Collecting the velocity                                    #                                                                                       
@@ -519,10 +518,10 @@ class Controller():
         self.L_base_lin_vel_input_2.append(vx*2)                                    #
         self.L_base_lin_vel_input_3.append(vx*2)                                    #
                                                                                     #
-        self.L_base_lin_vel_kalman_input_1.append(node_kalman.base_lin_vel_input[0])#
-        self.L_base_lin_vel_kalman_input_2.append(node_kalman.base_lin_vel_input[1])#
-        self.L_base_lin_vel_kalman_input_3.append(node_kalman.base_lin_vel_input[2])#
-        self.L_base_lin_vel_kalman_input_4.append(node_kalman.base_lin_vel_input[3])#
+        #self.L_base_lin_vel_kalman_input_1.append(node_kalman.base_lin_vel_input[0])#
+        #self.L_base_lin_vel_kalman_input_2.append(node_kalman.base_lin_vel_input[1])#
+        #self.L_base_lin_vel_kalman_input_3.append(node_kalman.base_lin_vel_input[2])#
+        #self.L_base_lin_vel_kalman_input_4.append(node_kalman.base_lin_vel_input[3])#
                                                                                     #
         self.L_base_ang_vel_input_1.append(self.obs[3])                             #
         self.L_base_ang_vel_input_2.append(self.obs[4])                             #
