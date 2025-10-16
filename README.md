@@ -159,7 +159,7 @@ Une fois l'installation complétée, suivre ces étapes pour lancer un modèle R
    ```
 2. Lancer le script principal :
    ```bash
-   python deploy_real/deploy_real_isaaclab.py
+   python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
 3. (Optionnel) Connecter ROS 2 :
    ```bash
