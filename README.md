@@ -55,7 +55,7 @@ Isaaclab
 ###  1️⃣ Setup
 Crée un environnement conda pour le projet :
 ```bash
-conda create -n env_isaaclab python=3.11
+conda create -n env_isaaclab python=3.10.18
 conda activate env_isaaclab
 ```
 
