@@ -10,10 +10,14 @@ import rclpy                       #
 from pathlib import Path           #
 ####################################
 
+# Get the current folder (the one where this file is located)
+current_dir = Path(__file__).resolve()
+project_root = current_dir.parents[1]  
+
 ######### To point the path to where unitree_sdk2_python is stored ########
 sys.path.append('.')                                                      #
 sys.path.append('..')                                                     #
-sys.path.append('/home/theo/deploy/unitree_sdk2_python') # TO MODIFY !!!  #
+sys.path.append(project_root / "unitree_sdk2_python")                     #
 ###########################################################################
 
 
@@ -35,10 +39,6 @@ from common.rotation_helper import get_gravity_orientation, transform_imu_data
 from common.remote_controller import RemoteController, KeyMap
 from deploy_real.configs.config import Config
 #import deploy_real.node_kalman as node_kalman
-
-# Get the current folder (the one where this file is located)
-current_dir = Path(__file__).resolve()
-project_root = current_dir.parents[1]   
 
 
 class Controller():
@@ -110,18 +110,18 @@ class Controller():
 
 
         ### ROS2 communication with Kalman filter which publishes on "/odometry/filtered" ###
-        from rclpy.executors import MultiThreadedExecutor                                   #
-        import threading                                                                    #
+        #from rclpy.executors import MultiThreadedExecutor                                  #
+        #import threading                                                                   #
                                                                                             #
-        rclpy.init()                                                                        #
-        #KOL = node_kalman.KalmanOdomListener()                                              #
+        #rclpy.init()                                                                       #
+        #KOL = node_kalman.KalmanOdomListener()                                             #
                                                                                             #
         # MultiThreadedExecutor                                                             #
-        executor = MultiThreadedExecutor()                                                  #
-        #executor.add_node(KOL)                                                              #
+        #executor = MultiThreadedExecutor()                                                 #
+        #executor.add_node(KOL)                                                             #
                                                                                             #
         # Lance l'exécuteur dans un thread                                                  #
-        threading.Thread(target=executor.spin, daemon=True).start()                         #
+        #threading.Thread(target=executor.spin, daemon=True).start()                        #
         #####################################################################################
 
         # [Etape] 2. Initialization of the channels
