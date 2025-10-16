@@ -109,7 +109,7 @@ Tester le modèle :
 
 ---
 ###  3️⃣ Créer un workspace
-Retourner dans Home et créer un répertoire principal qui contiendra tout le projet :
+Créer un répertoire principal qui contiendra tout le projet :
 ```bash
 mkdir ~/deploy_go2
 cd ~/deploy_go2
@@ -120,7 +120,7 @@ cd ~/deploy_go2
 ###  4️⃣ Cloner le projet principal
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
-cd ~/Deploy_SimToReal_Go2
+cd Deploy_SimToReal_Go2
 ```
 
 ---
