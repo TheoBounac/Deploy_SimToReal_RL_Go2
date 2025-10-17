@@ -52,7 +52,7 @@ Isaaclab
 ---
 <h2 align="center">🔧 Installation complète 🔧</h2> 
 
-###  1️⃣ Setup
+###  1️⃣ Setup de l'env conda
 Crée un environnement conda pour le projet :
 ```bash
 conda create -n env_isaaclab python=3.10.18
@@ -72,30 +72,30 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 ```
 
 
-
 ---
-###  2️⃣ Créer un workspace
-Créer un répertoire principal qui contiendra tout le projet :
-```bash
-mkdir ~/deploy_go2
-cd ~/deploy_go2
-```
+###  2️⃣ Cloner le projet principal
 
-
----
-###  3️⃣ Cloner le projet principal
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
 cd Deploy_SimToReal_Go2
 ```
+---
+Install depedencies :
+```bash
+pip install -r requirements.txt
+```
 
 ---
-###  4️⃣ Cloner le SDK Unitree 
+###  3️⃣ Cloner le SDK Unitree 
 unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
 
 Clone the repository using Git:
 ```bash
 git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
+```
+Variable d'environnement :
+```bash
+echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' >> ~/.bashrc
 ```
 Navigate to the directory and install it:
 ```bash
@@ -104,14 +104,14 @@ pip install -e .
 ```
 
 ---
-###  5️⃣ Cloner go2_odometry
+###  4️⃣ Cloner go2_odometry
 ```bash
 cd ..
 git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
 
 ---
-###  2️⃣ Installer Isaaclab
+###  5️⃣ Installer Isaaclab
 Cette partie est optionnelle, elle permet d'entraîner sois-même des modèles de RL. Des modèles pré-entraînés sont déja disponibles dans `pre_train`. 
 
 Pour installer Isaaclab, vous pouvez vous référer au [guide isaaclab](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html).
@@ -159,14 +159,13 @@ Une fois l'installation complétée, suivre ces étapes pour lancer un modèle R
    ```bash
    conda activate env_isaaclab
    ```
-2. Lancer le script principal :
+2. Navigate to `deploy_real`:
+   ```bash
+   cd ~/Deploy_SimToReal_Go2/deploy_real
+   ```
+3. Lancer le script principal :
    ```bash
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
-   ```
-3. (Optionnel) Connecter ROS 2 :
-   ```bash
-   ros2 topic echo /odom
-   ros2 topic pub /cmd_vel geometry_msgs/msg/Twist ...
    ```
 
 ---
