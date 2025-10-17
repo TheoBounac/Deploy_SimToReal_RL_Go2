@@ -142,7 +142,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
 ##  Author
 
 **Théo Bounaceur**  
-Laboratory **LORIA (CNRS / Université de Lorraine)**, Nancy in France  
+Laboratory **LORIA** (**CNRS** / **University of Lorraine**), Nancy in France  
 🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
 📫 Contact : theo.bounaceur@loria.fr
 
