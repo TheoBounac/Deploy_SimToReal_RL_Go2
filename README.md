@@ -71,6 +71,45 @@ Install a CUDA-enabled PyTorch 2.7.0 build for CUDA 12.8 :
 pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
+
+
+---
+###  2️⃣ Créer un workspace
+Créer un répertoire principal qui contiendra tout le projet :
+```bash
+mkdir ~/deploy_go2
+cd ~/deploy_go2
+```
+
+
+---
+###  3️⃣ Cloner le projet principal
+```bash
+git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
+cd Deploy_SimToReal_Go2
+```
+
+---
+###  4️⃣ Cloner le SDK Unitree 
+unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+
+Clone the repository using Git:
+```bash
+git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
+```
+Navigate to the directory and install it:
+```bash
+cd unitree_sdk2_python
+pip install -e .
+```
+
+---
+###  5️⃣ Cloner go2_odometry
+```bash
+cd ..
+git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
+```
+
 ---
 ###  2️⃣ Installer Isaaclab
 Cette partie est optionnelle, elle permet d'entraîner sois-même des modèles de RL. Des modèles pré-entraînés sont déja disponibles dans `pre_train`. 
@@ -105,43 +144,6 @@ cd isaaclab
 Tester le modèle :
 ```bash
 ./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/play.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4
-```
-
----
-###  3️⃣ Créer un workspace
-Créer un répertoire principal qui contiendra tout le projet :
-```bash
-mkdir ~/deploy_go2
-cd ~/deploy_go2
-```
-
-
----
-###  4️⃣ Cloner le projet principal
-```bash
-git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
-cd Deploy_SimToReal_Go2
-```
-
----
-###  5️⃣ Cloner le SDK Unitree 
-unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
-
-Clone the repository using Git:
-```bash
-git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
-```
-Navigate to the directory and install it:
-```bash
-cd unitree_sdk2_python
-pip install -e .
-```
-
----
-###  6️⃣ Cloner go2_odometry
-```bash
-cd ..
-git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
  7️⃣ 8️⃣ 9️⃣ 🔟
 
