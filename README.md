@@ -104,6 +104,47 @@ pip install -e .
 ```
 
 ---
+
+<h2 align="center">🚀 Utilisation 🚀</h2> 
+Une fois l'installation complétée, suivre ces étapes pour lancer un modèle RL sur le robot Go2. 
+
+1. Active ton environnement Python :
+   ```bash
+   conda activate env_isaaclab
+   ```
+2. Navigate to `deploy_real`:
+   ```bash
+   cd ~/Deploy_SimToReal_Go2/deploy_real
+   ```
+3. Lancer le script principal :
+   ```bash
+   python deploy_real_isaaclab.py enp0s31f6 go2.yaml
+   ```
+
+---
+
+##  Liens utiles
+
+| 🔗 Ressource | 📍 Lien |
+|--------------|---------|
+|  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
+|  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
+|  **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
+
+
+---
+
+
+##  Auteur
+
+**Théo Bounaceur**  
+Laboratoire **LORIA (CNRS / Université de Lorraine)**  
+🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
+📫 Contact : theo.bounaceur@loria.fr
+
+---
+
+---
 ###  4️⃣ Cloner go2_odometry
 ```bash
 cd ..
@@ -149,45 +190,4 @@ Tester le modèle :
 
 
 
-
----
-
-<h2 align="center">🚀 Utilisation 🚀</h2> 
-Une fois l'installation complétée, suivre ces étapes pour lancer un modèle RL sur le robot Go2. 
-
-1. Active ton environnement Python :
-   ```bash
-   conda activate env_isaaclab
-   ```
-2. Navigate to `deploy_real`:
-   ```bash
-   cd ~/Deploy_SimToReal_Go2/deploy_real
-   ```
-3. Lancer le script principal :
-   ```bash
-   python deploy_real_isaaclab.py enp0s31f6 go2.yaml
-   ```
-
----
-
-##  Liens utiles
-
-| 🔗 Ressource | 📍 Lien |
-|--------------|---------|
-|  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
-|  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
-|  **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
-
-
----
-
-
-##  Auteur
-
-**Théo Bounaceur**  
-Laboratoire **LORIA (CNRS / Université de Lorraine)**  
-🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
-📫 Contact : theo.bounaceur@loria.fr
-
----
 
