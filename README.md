@@ -109,6 +109,7 @@ pip install -e .
 ---
 
 <h2 align="center">🚀 Run the project 🚀</h2> 
+
 Once the installation is complete, follow these steps to launch an RL model on the Go2 robot.
 
 1. Activate conda env :
