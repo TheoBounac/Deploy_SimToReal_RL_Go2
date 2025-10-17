@@ -2,16 +2,9 @@
 # 🐾 Deploy_SimToReal_Go2 - Python dependencies
 # ============================================================
 
-# === Core ML & Simulation libraries ===
-torch==2.7.0+cu128
-torchvision==0.22.0+cu128
-
 # === Visualization & data handling ===
 matplotlib==3.8.4
 
 # === Configuration parsing ===
 PyYAML==6.0.1
-
-# === PyTorch CUDA index ===
---extra-index-url https://download.pytorch.org/whl/cu128
 
