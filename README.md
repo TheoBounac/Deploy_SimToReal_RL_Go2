@@ -1,36 +1,39 @@
 # <h2 align="center">DEPLOY SIM-TO-REAL RL MODEL ON Go2</h2>
 
 
-**Ce repository vise à entraîner un modèle de Reinforcement Learning (RL) sur le robot quadrupède Unitree Go2** en simulation (IsaacLab), et à le déployer sur le robot réel.
+**This repository aims to train a **Reinforcement Learning (RL)** model on the **Unitree Go2 quadruped robot** in simulation (IsaacLab) and deploy it on the real robot.**
 
 ---
-## Aperçu général
+## Project overview
 
-Ce projet met en place une chaîne **Sim-to-Real** complète :
-- 🎮 **Simulation IsaacLab** pour l’entraînement des politiques RL  
-- 🤖 **Déploiement sur le robot Go2 réel** via le SDK Unitree  
-- 🔄 **Communication ROS 2** pour le contrôle en temps réel et l’intégration capteurs/commandes  
+This project implements a complete **Sim-to-Real** pipeline:
 
-Le projet combine **Python + ROS 2 + IsaacLab**, permettant d'entraîner, tester et transférer une politique RL vers le robot réel.
+ - 🎮 **IsaacLab Simulation** for training Reinforcement Learning (RL) policies
+
+ - 🤖 **Deployment on the real Go2 robot** via the Unitree SDK
+
+ - 🔄 **ROS 2 Communication** for real-time control and sensor/command integration
+
+The project combines **Python + ROS 2 + IsaacLab**, enabling training, testing, and transferring an RL policy to the real robot.
 
 ---
-## 📁 Structure du projet
-Voici une vue d’ensemble du projet et de son architecture finale :
+## 📁 Architecture
+
 ```
 deploy_go2/
 │
-├── deploy_real/                # Scripts de déploiement sur le robot Go2 
+├── deploy_real/                # Deployment scripts for Go2
 │   ├── config.py
 │   ├── deploy_real_isaaclab.py
 │   └── node_kalman.py
 │
-├── pre_train/                  # Modèles RL pré-entraînés (policies)
+├── pre_train/                  # Pre-trained RL models (policies)
 │   ├── policy_rough.pt
 │   └── ...
 │
 ├── unitree_sdk2_python/        # SDK Unitree
 │
-├── go2_odometry/               # Filtre de Kalman pour le Go2
+├── go2_odometry/               # Kalman Filter for Go2
 │
 └── README.md                 
 
@@ -40,7 +43,7 @@ Isaaclab
 ---
 ## ⚙️ System Requirements
 
-|  Composant |  Version recommandée |
+|  Component |  Recommended Version |
 |--------------|------------------------|
 | **Ubuntu** | 22.04 LTS |
 | **Python** | 3.10+ |
@@ -50,10 +53,10 @@ Isaaclab
 
 
 ---
-<h2 align="center">🔧 Installation complète 🔧</h2> 
+<h2 align="center">🔧 Installation Guide🔧</h2> 
 
-###  1️⃣ Setup de l'env conda
-Crée un environnement conda pour le projet :
+###  1️⃣ Env conda setup
+Create a conda environment for the project :
 ```bash
 conda create -n env_isaaclab python=3.10.18
 conda activate env_isaaclab
@@ -73,7 +76,7 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 
 
 ---
-###  2️⃣ Cloner le projet principal
+###  2️⃣ Clone the project
 
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
@@ -86,14 +89,14 @@ pip install -r requirements.txt
 ```
 
 ---
-###  3️⃣ Cloner le SDK Unitree 
+###  3️⃣ Clone SDK Unitree
 unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
 
-Clone the repository using Git:
+Clone the repository using Git :
 ```bash
 git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 ```
-Variable d'environnement :
+Environment Variable :
 ```bash
 echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' >> ~/.bashrc
 ```
@@ -105,10 +108,10 @@ pip install -e .
 
 ---
 
-<h2 align="center">🚀 Utilisation 🚀</h2> 
-Une fois l'installation complétée, suivre ces étapes pour lancer un modèle RL sur le robot Go2. 
+<h2 align="center">🚀 Run the project 🚀</h2> 
+Once the installation is complete, follow these steps to launch an RL model on the Go2 robot.
 
-1. Active ton environnement Python :
+1. Activate conda env :
    ```bash
    conda activate env_isaaclab
    ```
@@ -116,16 +119,16 @@ Une fois l'installation complétée, suivre ces étapes pour lancer un modèle R
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
-3. Lancer le script principal :
+3. Run `deploy_real_isaaclab.py`:
    ```bash
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
 
 ---
 
-##  Liens utiles
+##  Links
 
-| 🔗 Ressource | 📍 Lien |
+| 🔗 Resources | 📍 Link |
 |--------------|---------|
 |  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
 |  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
@@ -135,10 +138,10 @@ Une fois l'installation complétée, suivre ces étapes pour lancer un modèle R
 ---
 
 
-##  Auteur
+##  Author
 
 **Théo Bounaceur**  
-Laboratoire **LORIA (CNRS / Université de Lorraine)**  
+Laboratory **LORIA (CNRS / Université de Lorraine)**, Nancy in France  
 🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
 📫 Contact : theo.bounaceur@loria.fr
 
