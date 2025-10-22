@@ -13,7 +13,7 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="doc/robot_1.gif" width="90%">
+      <img src="doc/robot_1.gif" width="10%">
     </td>
     <td align="center">
       <img src="doc/rviz_1.gif" width="90%">
