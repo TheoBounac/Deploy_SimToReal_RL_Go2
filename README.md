@@ -7,7 +7,7 @@
 
 
 <p align="center">
-  <img src="doc/robot_1.gif" width="45%">
+  <img src="doc/robot_1.gif" width="50%">
   <img src="doc/rviz_1.gif" width="45%">
 </p>
 
