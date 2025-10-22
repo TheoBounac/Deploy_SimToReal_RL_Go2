@@ -38,7 +38,7 @@ from common.command_helper import create_damping_cmd, create_zero_cmd, init_cmd_
 from common.rotation_helper import get_gravity_orientation, transform_imu_data
 from common.remote_controller import RemoteController, KeyMap
 from deploy_real.configs.config import Config
-#import deploy_real.node_kalman as node_kalman
+import deploy_real.node_kalman as node_kalman
 
 
 class Controller():
@@ -110,18 +110,18 @@ class Controller():
 
 
         ### ROS2 communication with Kalman filter which publishes on "/odometry/filtered" ###
-        #from rclpy.executors import MultiThreadedExecutor                                  #
-        #import threading                                                                   #
+        from rclpy.executors import MultiThreadedExecutor                                  #
+        import threading                                                                   #
                                                                                             #
-        #rclpy.init()                                                                       #
-        #KOL = node_kalman.KalmanOdomListener()                                             #
+        rclpy.init()                                                                       #
+        KOL = node_kalman.KalmanOdomListener()                                             #
                                                                                             #
         # MultiThreadedExecutor                                                             #
-        #executor = MultiThreadedExecutor()                                                 #
-        #executor.add_node(KOL)                                                             #
+        executor = MultiThreadedExecutor()                                                 #
+        executor.add_node(KOL)                                                             #
                                                                                             #
         # Lance l'exécuteur dans un thread                                                  #
-        #threading.Thread(target=executor.spin, daemon=True).start()                        #
+        threading.Thread(target=executor.spin, daemon=True).start()                        #
         #####################################################################################
 
         # [Etape] 2. Initialization of the channels
@@ -183,7 +183,7 @@ class Controller():
     def LowStateGoHandler(self, msg: LowStateGo):                                                              #
         self.low_state = msg                                                                                   #
         self.remote_controller.set(self.low_state.wireless_remote)                                             #
-        #node_kalman.msg = msg                                                                                  #
+        node_kalman.msg = msg                                                                                  #
                                                                                                                #
     def SportStateMessageHandler(self, sport_state_msg):                                                       #
         self.velocity = sport_state_msg.velocity  # Collecting the velocity                                    #                                                                                       
@@ -476,8 +476,8 @@ class Controller():
         self.obs[:4]= [f0,f1,f2,f3]                                                                                           #
                                                                                                                               #
                                                                                                                               #
-        self.obs[4:7]= [vx*2,vy*2,vz*2] #TO BE USED IF THE KALMAN FILTER DOESN’T WORK (MY VELOCITY ESTIMATION)                #
-        #self.obs[4:7]= [node_kalman.base_lin_vel_input[0],node_kalman.base_lin_vel_input[1],node_kalman.base_lin_vel_input[2]]#
+        #self.obs[4:7]= [vx*2,vy*2,vz*2] #TO BE USED IF THE KALMAN FILTER DOESN’T WORK (MY VELOCITY ESTIMATION)                #
+        self.obs[4:7]= [node_kalman.base_lin_vel_input[0],node_kalman.base_lin_vel_input[1],node_kalman.base_lin_vel_input[2]]#
                                                                                                                               #
                                                                                                                               #
         self.obs[7:10] = ang_vel                                                                                              #
@@ -520,10 +520,10 @@ class Controller():
         self.L_base_lin_vel_input_2.append(vx*2)                                    #
         self.L_base_lin_vel_input_3.append(vx*2)                                    #
                                                                                     #
-        #self.L_base_lin_vel_kalman_input_1.append(node_kalman.base_lin_vel_input[0])#
-        #self.L_base_lin_vel_kalman_input_2.append(node_kalman.base_lin_vel_input[1])#
-        #self.L_base_lin_vel_kalman_input_3.append(node_kalman.base_lin_vel_input[2])#
-        #self.L_base_lin_vel_kalman_input_4.append(node_kalman.base_lin_vel_input[3])#
+        self.L_base_lin_vel_kalman_input_1.append(node_kalman.base_lin_vel_input[0])#
+        self.L_base_lin_vel_kalman_input_2.append(node_kalman.base_lin_vel_input[1])#
+        self.L_base_lin_vel_kalman_input_3.append(node_kalman.base_lin_vel_input[2])#
+        self.L_base_lin_vel_kalman_input_4.append(node_kalman.base_lin_vel_input[3])#
                                                                                     #
         self.L_base_ang_vel_input_1.append(self.obs[3])                             #
         self.L_base_ang_vel_input_2.append(self.obs[4])                             #

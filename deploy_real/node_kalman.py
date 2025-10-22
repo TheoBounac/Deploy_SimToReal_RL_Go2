@@ -36,18 +36,20 @@ class KalmanOdomListener(Node):
         
     def listener_callback(self, msg):
         # Estimated Vx,Vy,VZ by the Kalman Filter
-        if deploy_real_isaaclab.base_lin_vel_input is not None:
-            print("listener_callback")
-            print("msg.twist.twist.linear",msg.twist.twist.linear)
-            global base_lin_vel_input
-            base_lin_vel_input[0] = msg.twist.twist.linear.x
-            base_lin_vel_input[1] = msg.twist.twist.linear.y
-            base_lin_vel_input[2] = msg.twist.twist.linear.z
-            base_lin_vel_input[3] = msg.twist.twist.angular.z
+
+        print("listener_callback")
+        print("msg.twist.twist.linear",msg.twist.twist.linear)
+        global base_lin_vel_input
+        base_lin_vel_input[0] = msg.twist.twist.linear.x
+        base_lin_vel_input[1] = msg.twist.twist.linear.y
+        base_lin_vel_input[2] = msg.twist.twist.linear.z
+        base_lin_vel_input[3] = msg.twist.twist.angular.z
     
     # This function transforms the lowstate msg receive by deploy_real_isaaclab.py to the Lowstate standard format
     def publish_lowstate(self):
+        print("publish")
         if msg is not None:
+            print("publish")
             ros_msg = LowStateRos()
 
             # Champs simples
