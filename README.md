@@ -7,8 +7,8 @@
 
 
 <p align="center">
-  <img src="docs/gifs/go2_walk.gif" width="45%">
-  <img src="docs/gifs/go2_turn.gif" width="45%">
+  <img src="doc/robot_1.gif" width="45%">
+  <img src="docs/rviz1.gif" width="45%">
 </p>
 
 
