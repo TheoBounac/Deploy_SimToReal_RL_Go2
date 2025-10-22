@@ -12,7 +12,7 @@
   </colgroup>
   <tr>
     <th align="center">Reality</th>
-    <th align="center">Simulation</th>
+    <th align="center">Real time Rviz2 observation</th>
   </tr>
   <tr>
     <td align="center" width="50%">
