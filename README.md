@@ -13,10 +13,10 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="doc/robot_1.gif" width="10%">
+      <img src="doc/robot_1.gif" width="100%">
     </td>
     <td align="center">
-      <img src="doc/rviz_1.gif" width="120%">
+      <img src="doc/rviz_1.gif" width="100%">
     </td>
   </tr>
 </table>
