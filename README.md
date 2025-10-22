@@ -5,21 +5,25 @@
 
 
 
-
-<table align="center">
+<table align="center" width="100%">
+  <colgroup>
+    <col width="50%">
+    <col width="50%">
+  </colgroup>
   <tr>
     <th align="center">Reality</th>
     <th align="center">Simulation</th>
   </tr>
   <tr>
-    <td align="center">
-      <img src="doc/robot_1.gif" width="100%">
+    <td align="center" width="50%">
+      <img src="doc/robot_1.gif" width="90%">
     </td>
-    <td align="center">
-      <img src="doc/rviz_1.gif" width="100%">
+    <td align="center" width="50%">
+      <img src="doc/rviz_1.gif" width="90%">
     </td>
   </tr>
 </table>
+
 
 
 
