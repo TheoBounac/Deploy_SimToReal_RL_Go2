@@ -16,18 +16,23 @@
 
 <table align="center" style="width:100%; table-layout:fixed; border-collapse:collapse;">
   <tr>
-    <th style="width:50%; text-align:center;">Reality</th>
-    <th style="width:50%; text-align:center;">RealityRealityRealityReality</th>
+    <th style="width:50%; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+      Reality
+    </th>
+    <th style="width:50%; text-align:center; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+      RealityRealityRealityReality
+    </th>
   </tr>
   <tr>
-    <td style="width:50%; text-align:center; vertical-align:middle;">
+    <td style="text-align:center; vertical-align:middle;">
       <img src="doc/isaaclab.gif" style="width:100%; height:auto; display:block; margin:auto;">
     </td>
-    <td style="width:50%; text-align:center; vertical-align:middle;">
+    <td style="text-align:center; vertical-align:middle;">
       <img src="doc/isaaclab.gif" style="width:100%; height:auto; display:block; margin:auto;">
     </td>
   </tr>
 </table>
+
 
 
 
