@@ -26,10 +26,10 @@
 
   <tr>
     <td style="width:50%; text-align:center;">
-      <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
+      <img src="doc/isaaclab.gif" style="width:100%; display:block; margin:auto;">
     </td>
     <td style="width:50%; text-align:center;">
-      <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
+      <img src="doc/20251023_180952.gif" style="width:100%; display:block; margin:auto;">
     </td>
   </tr>
 </table>
