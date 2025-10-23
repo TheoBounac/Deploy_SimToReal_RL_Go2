@@ -21,7 +21,7 @@
   <div style="display:inline-block; width:200px;">Reality</div>
 </th>
 <th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">SimulationWithLongName</div>
+  <div style="display:inline-block; width:200px;">Reality</div>
 </th>
 
   <tr>
@@ -34,40 +34,6 @@
   </tr>
 </table>
 
-<table style="width:960px; margin:auto; border-collapse:collapse; table-layout:fixed;">
-  <colgroup>
-    <col style="width:50%;">
-    <col style="width:50%;">
-  </colgroup>
-
-  <thead>
-    <tr>
-      <th style="text-align:center; padding:8px;">
-        <div style="max-width:220px; margin:0 auto; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-          Reality
-        </div>
-      </th>
-      <th style="text-align:center; padding:8px;">
-        <div style="max-width:220px; margin:0 auto; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-          SimulationWithLongName
-        </div>
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <tr>
-      <td style="height:360px; padding:0; text-align:center; vertical-align:middle;">
-        <img src="doc/robot_1.gif"
-             style="max-width:90%; max-height:90%; display:block; margin:auto;">
-      </td>
-      <td style="height:360px; padding:0; text-align:center; vertical-align:middle;">
-        <img src="doc/robot_1.gif"
-             style="max-width:90%; max-height:90%; display:block; margin:auto;">
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 
 
