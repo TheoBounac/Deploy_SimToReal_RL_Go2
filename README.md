@@ -18,8 +18,8 @@
 
 <table align="center" style="border-collapse:collapse;">
   <tr>
-    <th style="width:400px; text-align:center;">Reality</th>
-    <th style="width:400px; text-align:center;">Simulationhhhhhh</th>
+    <th style="width:50%; text-align:center;">Reality</th>
+    <th style="width:50%; text-align:center;">Simulationhhhhhh</th>
   </tr>
   <tr>
     <td style="width:50%; text-align:center;">
