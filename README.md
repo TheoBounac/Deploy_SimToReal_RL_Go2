@@ -13,21 +13,22 @@
     </td>
   </tr>
 </table>
-<table align="center" style="width:100%; table-layout:fixed;">
+
+<table align="center" style="width:100%; table-layout:fixed; border-collapse:collapse;">
   <tr>
-    <th style="text-align:center;">Reality</th>
-    <th style="text-align:center;">Reality</th>
-    <th style="text-align:center;">Real time Rviz2 observation</th>
+    <th style="width:33.33%; text-align:center;">Reality</th>
+    <th style="width:33.33%; text-align:center;">Reality</th>
+    <th style="width:33.33%; text-align:center;">Real time Rviz2 observation</th>
   </tr>
   <tr>
-    <td style="text-align:center; vertical-align:middle;">
-      <img src="doc/robot_1.gif" style="width:100%; height:auto;">
+    <td style="width:33.33%; text-align:center; vertical-align:middle;">
+      <img src="doc/robot_1.gif" style="width:100%; height:auto; display:block; margin:auto;">
     </td>
-    <td style="text-align:center; vertical-align:middle;">
-      <img src="doc/robot_1.gif" style="width:100%; height:auto;">
+    <td style="width:33.33%; text-align:center; vertical-align:middle;">
+      <img src="doc/robot_1.gif" style="width:100%; height:auto; display:block; margin:auto;">
     </td>
-    <td style="text-align:center; vertical-align:middle;">
-      <img src="doc/rviz_1.gif" style="width:100%; height:auto;">
+    <td style="width:33.33%; text-align:center; vertical-align:middle;">
+      <img src="doc/rviz_1.gif" style="width:100%; height:auto; display:block; margin:auto;">
     </td>
   </tr>
 </table>
