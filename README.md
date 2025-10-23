@@ -5,9 +5,9 @@
 
 
 <p align="center">
-  <img src="doc/isaaclab.gif" width="800">
-  <br>
   <b>Simulation IsaacLab</b>
+  <img src="doc/isaaclab.gif" width="700">
+  <br>
 </p>
 
 
