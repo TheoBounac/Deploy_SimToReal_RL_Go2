@@ -17,7 +17,7 @@
 <table align="center" style="border-collapse:collapse;">
   <tr>
     <th style="width:400px; text-align:center;">Reality</th>
-    <th style="width:400px; text-align:center;">Simulation</th>
+    <th style="width:400px; text-align:center;">Simulationhhhhhh</th>
   </tr>
   <tr>
     <td style="width:40px; text-align:center;">
