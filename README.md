@@ -22,21 +22,19 @@
   </colgroup>
   <tr>
     <th align="center">Reality</th>
-    <th align="center">Reality</th>
-    <th align="center">Real time Rviz2 observation</th>
+    <th align="center">Simulation</th>
+    <th align="center">Real-time Rviz2 Observation</th>
   </tr>
   <tr>
-    <td align="center" width="50%">
+    <td align="center">
       <img src="doc/robot_1.gif" width="100%">
     </td>
-    <td align="center" width="50%">
-      <img src="doc/robot_1.gif" width="100%">
+    <td align="center">
+      <img src="doc/simulation.gif" width="100%">
     </td>
-    <td align="center" width="50%">
-      <img src="doc/rviz_1.gif" width="90%">
-    </td>
-  </tr>
-</table>
+    <td align="center">
+      <
+
 
 
 
