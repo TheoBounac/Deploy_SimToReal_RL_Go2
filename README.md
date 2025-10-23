@@ -4,6 +4,10 @@
 **This repository aims to train a **Reinforcement Learning (RL)** model on the **Unitree Go2 quadruped robot** in simulation (IsaacLab) and deploy it on the real robot.**
 
 
+
+
+
+
 <p align="center">
   <b>Simulation IsaacLab</b>
   <img src="doc/isaaclab.gif" width="700">
