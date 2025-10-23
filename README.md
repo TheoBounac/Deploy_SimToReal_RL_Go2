@@ -9,7 +9,7 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="doc/isaaclab.gif" width="100%">
+      <img src="doc/isaaclab.gif" width="90%">
     </td>
   </tr>
 </table>
