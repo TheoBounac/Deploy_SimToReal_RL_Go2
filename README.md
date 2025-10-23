@@ -17,12 +17,13 @@
 
 
 <table align="center" style="border-collapse:collapse;">
-  <tr>
-    <th style="width:50%; text-align:center; padding-left:80px; padding-right:80px;">
-  Reality
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">Reality</div>
 </th>
-    <th style="width:50%; text-align:center;">Simulationhhhhhh</th>
-  </tr>
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">SimulationWithLongName</div>
+</th>
+
   <tr>
     <td style="width:50%; text-align:center;">
       <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
