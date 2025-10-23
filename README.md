@@ -17,8 +17,8 @@
 <table style="margin:auto; border-collapse:collapse; table-layout:fixed;">
   <colgroup>
     <!-- 👉 règle ici la largeur exacte des 2 colonnes -->
-    <col style="width:480px;">
-    <col style="width:480px;">
+    <col style="width:500px;">
+    <col style="width:500px;">
   </colgroup>
 
   <tr>
