@@ -24,7 +24,7 @@
       <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
     </td>
     <td style="width:400px; text-align:center;">
-      <img src="doc/rviz_1.gif" style="width:100%; display:block; margin:auto;">
+      <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
     </td>
   </tr>
 </table>
