@@ -20,7 +20,7 @@
     <th style="width:400px; text-align:center;">Simulation</th>
   </tr>
   <tr>
-    <td style="width:400px; text-align:center;">
+    <td style="width:40px; text-align:center;">
       <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
     </td>
     <td style="width:400px; text-align:center;">
@@ -29,6 +29,24 @@
   </tr>
 </table>
 
+<table align="center" style="width:100%; table-layout:fixed; border-collapse:collapse;">
+  <colgroup>
+    <col style="width:50%;">
+    <col style="width:50%;">
+  </colgroup>
+  <tr>
+    <th style="text-align:center; height:40px;">Reality</th>
+    <th style="text-align:center; height:40px;">RealityRealityRealityReality</th>
+  </tr>
+  <tr>
+    <td style="text-align:center; vertical-align:middle; height:300px;">
+      <img src="doc/isaaclab.gif" style="max-width:100%; max-height:100%; display:block; margin:auto;">
+    </td>
+    <td style="text-align:center; vertical-align:middle; height:300px;">
+      <img src="doc/isaaclab.gif" style="max-width:100%; max-height:100%; display:block; margin:auto;">
+    </td>
+  </tr>
+</table>
 
 
 
