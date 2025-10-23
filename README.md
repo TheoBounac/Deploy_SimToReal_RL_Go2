@@ -13,24 +13,25 @@
     </td>
   </tr>
 </table>
-
-<table align="center" width="100%">
-  <colgroup>
-    <col width="33.33%">
-    <col width="33.33%">
-    <col width="33.33%">
-  </colgroup>
+<table align="center" style="width:100%; table-layout:fixed;">
   <tr>
-    <th align="center">Reality</th>
-    <th align="center">Reality</th>
-    <th align="center">Real time Rviz2 observation</th>
+    <th style="text-align:center;">Reality</th>
+    <th style="text-align:center;">Reality</th>
+    <th style="text-align:center;">Real time Rviz2 observation</th>
   </tr>
   <tr>
-    <td align="center"><img src="doc/robot_1.gif" width="100%"></td>
-    <td align="center"><img src="doc/robot_1.gif" width="100%"></td>
-    <td align="center"><img src="doc/rviz_1.gif" width="100%"></td>
+    <td style="text-align:center; vertical-align:middle;">
+      <img src="doc/robot_1.gif" style="width:100%; height:auto;">
+    </td>
+    <td style="text-align:center; vertical-align:middle;">
+      <img src="doc/robot_1.gif" style="width:100%; height:auto;">
+    </td>
+    <td style="text-align:center; vertical-align:middle;">
+      <img src="doc/rviz_1.gif" style="width:100%; height:auto;">
+    </td>
   </tr>
 </table>
+
 
 
 
