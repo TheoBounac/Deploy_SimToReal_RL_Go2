@@ -17,7 +17,7 @@
 <table align="center" style="width:100%; table-layout:fixed; border-collapse:collapse;">
   <tr>
     <th style="width:50%; text-align:center;">Reality</th>
-    <th style="width:50%; text-align:center;">Real time Rviz2 observation</th>
+    <th style="width:50%; text-align:center;">Reality/th>
   </tr>
   <tr>
     <td style="width:50%; text-align:center; vertical-align:middle;">
