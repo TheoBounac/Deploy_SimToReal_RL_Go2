@@ -21,7 +21,7 @@
   <div style="display:inline-block; width:200px;">Reality</div>
 </th>
 <th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Reality</div>
+  <div style="display:inline-block; width:200px;">Realityerjklfhiues'hf</div>
 </th>
 
   <tr>
