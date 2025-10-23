@@ -14,34 +14,7 @@
   </tr>
 </table>
 
-<table style="margin:auto; border-collapse:collapse; table-layout:fixed;">
-  <colgroup>
-    <!-- 👉 règle ici la largeur exacte des 2 colonnes -->
-    <col style="width:5000px;">
-    <col style="width:500px;">
-  </colgroup>
 
-  <tr>
-    <!-- 👉 règle ici la hauteur exacte des en-têtes -->
-    <th style="height:60px; text-align:center;">Reality</th>
-    <th style="height:60px; text-align:center;">Simulation</th>
-  </tr>
-
-  <tr>
-    <!-- 👉 règle ici la hauteur exacte des cases vidéo -->
-    <td style="height:360px; padding:0; text-align:center; vertical-align:middle;">
-      <video src="doc/robot_1.gif" autoplay loop muted playsinline
-             style="width:90%; height:90%; object-fit:contain; display:block; margin:auto;"></video>
-      <!-- Si GIF: <img src="doc/robot_1.gif" style="max-width:90%; max-height:90%; display:block; margin:auto;"> -->
-    </td>
-
-    <td style="height:360px; padding:0; text-align:center; vertical-align:middle;">
-      <video src="doc/rviz_1.mp4" autoplay loop muted playsinline
-             style="width:90%; height:90%; object-fit:contain; display:block; margin:auto;"></video>
-      <!-- Si GIF: <img src="doc/rviz_1.gif" style="max-width:90%; max-height:90%; display:block; margin:auto;"> -->
-    </td>
-  </tr>
-</table>
 
 
 <table align="center" style="border-collapse:collapse;">
