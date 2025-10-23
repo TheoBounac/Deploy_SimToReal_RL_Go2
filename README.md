@@ -22,10 +22,10 @@
     <th style="width:400px; text-align:center;">Simulationhhhhhh</th>
   </tr>
   <tr>
-    <td style="width:400px; text-align:center;">
+    <td style="width:50%; text-align:center;">
       <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
     </td>
-    <td style="width:800px; text-align:center;">
+    <td style="width:50%; text-align:center;">
       <img src="doc/robot_1.gif" style="width:100%; display:block; margin:auto;">
     </td>
   </tr>
