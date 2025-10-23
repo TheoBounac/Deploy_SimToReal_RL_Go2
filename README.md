@@ -21,10 +21,10 @@
 
 <table align="center" style="border-collapse:collapse;">
 <th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Deploy on real robot Go2</div>
+  <div style="display:inline-block; width:200px;">Deploy on real robot </div>
 </th>
 <th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Real time Kalman filter blabla</div>
+  <div style="display:inline-block; width:200px;">Real time Kalman filter</div>
 </th>
 
   <tr>
