@@ -30,7 +30,7 @@
   <tr>
     <!-- 👉 règle ici la hauteur exacte des cases vidéo -->
     <td style="height:360px; padding:0; text-align:center; vertical-align:middle;">
-      <video src="doc/robot_1.mp4" autoplay loop muted playsinline
+      <video src="doc/robot_1.gif" autoplay loop muted playsinline
              style="width:90%; height:90%; object-fit:contain; display:block; margin:auto;"></video>
       <!-- Si GIF: <img src="doc/robot_1.gif" style="max-width:90%; max-height:90%; display:block; margin:auto;"> -->
     </td>
