@@ -6,7 +6,7 @@
 
 <div style="text-align:center;">
   <img src="doc/isaaclab.gif" style="width:90%; display:block; margin:auto;">
-  <p style="font-size:16px; font-weight:bold; margin-top:8px;">Simulation IsaacLab - Terrain irrégulier</p>
+  <p style="font-weight:bold; font-size:16px;">Simulation IsaacLab</p>
 </div>
 
 
