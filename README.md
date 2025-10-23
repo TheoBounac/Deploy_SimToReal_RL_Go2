@@ -25,10 +25,10 @@
       <img src="doc/isaaclab.gif" style="width:90%; height:auto; display:block; margin:auto;">
     </td>
     <td style="width:33.33%; text-align:center; vertical-align:middle;">
-      <img src="doc/robot_1.gif" style="width:90%; height:auto; display:block; margin:auto;">
+      <img src="doc/isaaclab.gif" style="width:90%; height:auto; display:block; margin:auto;">
     </td>
     <td style="width:33.33%; text-align:center; vertical-align:middle;">
-      <img src="doc/rviz_1.gif" style="width:90%; height:auto; display:block; margin:auto;">
+      <img src="doc/isaaclab.gif" style="width:90%; height:auto; display:block; margin:auto;">
     </td>
   </tr>
 </table>
