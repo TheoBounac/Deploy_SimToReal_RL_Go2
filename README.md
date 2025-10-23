@@ -24,7 +24,7 @@
   <div style="display:inline-block; width:200px;">Deploy on real robot Go2</div>
 </th>
 <th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Real time Kalman filter </div>
+  <div style="display:inline-block; width:200px;">Real time Kalman filter blabla</div>
 </th>
 
   <tr>
