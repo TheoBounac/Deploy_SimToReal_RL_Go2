@@ -16,8 +16,9 @@
 
 <table align="center" width="100%">
   <colgroup>
-    <col width="50%">
-    <col width="50%">
+    <col width="33.33%">
+    <col width="33.33%">
+    <col width="33.33%">
   </colgroup>
   <tr>
     <th align="center">Reality</th>
