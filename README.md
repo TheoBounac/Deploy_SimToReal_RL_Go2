@@ -4,8 +4,9 @@
 **This repository aims to train a **Reinforcement Learning (RL)** model on the **Unitree Go2 quadruped robot** in simulation (IsaacLab) and deploy it on the real robot.
 It also includes the use of a **Kalman filter** for pose and velocity estimation, ensuring accurate state feedback during real-world deployment.**
 
-<b>Simulation IsaacLab</b>
+
 <p align="center">
+  <b>Simulation IsaacLab</b>
   <img src="doc/isaaclab.gif" width="700">
   <br>
 </p>
