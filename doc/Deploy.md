@@ -19,7 +19,7 @@ It also includes the use of a **Kalman filter** for pose and velocity estimation
 
 <p align="center">
   <b>Simulation IsaacLab</b>
-  <img src="doc/isaaclab.gif" width="700">
+  <img src="isaaclab.gif" width="700">
   <br>
 </p>
 
