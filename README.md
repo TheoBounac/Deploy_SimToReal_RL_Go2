@@ -89,7 +89,7 @@ Isaaclab
 ---
 <h2 align="center">🔧 Installation Guide🔧</h2> 
 
-[📘 Detailed Installation Guide](doc/installation.md)
+[📘 Detailed Installation Guide](doc/Deploy.md)
 
 
 ###  1️⃣ Env conda setup
