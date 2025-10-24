@@ -116,7 +116,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ```
 2. Connect the robot with ethernet
    <p align="center">
-    <img src="ethernet.gif" width="500">
+    <img src="ethernet.jpeg" width="500">
     <br>
    </p>
 
