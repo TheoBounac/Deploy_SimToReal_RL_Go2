@@ -3,53 +3,6 @@
 
 **This repository aims to train a **Reinforcement Learning (RL)** model on the **Unitree Go2 quadruped robot** in simulation (IsaacLab) and deploy it on the real robot.**
 
-
-<p align="center">
-  <b>Simulation IsaacLab</b>
-  <img src="doc/isaaclab.gif" width="700">
-  <br>
-</p>
-
-
-
-
-
-
-<table align="center" style="border-collapse:collapse;">
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Reality</div>
-</th>
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Reality</div>
-</th>
-
-  <tr>
-    <td style="width:50%; text-align:center;">
-      <img src="doc/isaaclab.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-    <td style="width:50%; text-align:center;">
-      <img src="doc/telsite.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-  </tr>
-</table>
-
-
-
-
----
-## Project overview
-
-This project implements a complete **Sim-to-Real** pipeline:
-
- - 🎮 **IsaacLab Simulation** for training Reinforcement Learning (RL) policies
-
- - 🤖 **Deployment on the real Go2 robot** via the Unitree SDK
-
- - 🔄 **ROS 2 Communication** for real-time control and sensor/command integration
-
-The project combines **Python + ROS 2 + IsaacLab**, enabling training, testing, and transferring an RL policy to the real robot.
-
----
 ## 📁 Architecture
 
 ```
