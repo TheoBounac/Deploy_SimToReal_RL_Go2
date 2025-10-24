@@ -4,7 +4,7 @@
 **This section aims to **deploy** on the Go2 robot (Unitrre), a low level RL model (policy)**
 
 <p align="center">
-  <b>Deploy on real robot Go2</b>
+  
   <img src="robot2.gif" width="700">
   <br>
 </p>
