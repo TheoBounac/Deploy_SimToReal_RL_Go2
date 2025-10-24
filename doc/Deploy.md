@@ -44,7 +44,7 @@ deploy_go2/
 
 
 ---
-<h2 align="center">🔧 Installation Guide🔧</h2> 
+<h2 align="center">🔧 Installation Guide : Deploy🔧</h2> 
 
 ###  1️⃣ Env conda setup
 Create a conda environment for the project :
@@ -99,7 +99,7 @@ pip install -e .
 
 ---
 
-<h2 align="center">🚀 Run the project 🚀</h2> 
+<h2 align="center">🚀 Run the project : Deploy 🚀</h2> 
 
 Once the installation is complete, follow these steps to launch an RL model on the Go2 robot.
 
