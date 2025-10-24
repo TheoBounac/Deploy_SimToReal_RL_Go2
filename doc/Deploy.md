@@ -98,6 +98,24 @@ pip install -e .
 ```
 
 ---
+###  4️⃣ Clone Go2_odometry
+unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+
+Clone the repository using Git :
+```bash
+git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
+```
+Environment Variable :
+```bash
+echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' >> ~/.bashrc
+```
+Navigate to the directory and install it:
+```bash
+cd unitree_sdk2_python
+pip install -e .
+```
+
+---
 
 <h2 align="center">🚀 Run the project : Deploy 🚀</h2> 
 
