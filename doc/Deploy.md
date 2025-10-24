@@ -114,6 +114,13 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ```bash
    conda activate env_isaaclab
    ```
+2. Connect the robot with ethernet
+   <p align="center">
+    <img src="ethernet.gif" width="500">
+    <br>
+   </p>
+
+   
 2. Navigate to `deploy_real`:
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
@@ -126,7 +133,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
 ---
 
 
- 7️⃣ 8️⃣ 9️⃣ 🔟
+
 
 
 
