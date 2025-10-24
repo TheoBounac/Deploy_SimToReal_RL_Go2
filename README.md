@@ -89,6 +89,9 @@ Isaaclab
 ---
 <h2 align="center">🔧 Installation Guide🔧</h2> 
 
+[📘 Detailed Installation Guide](doc/installation.md)
+
+
 ###  1️⃣ Env conda setup
 Create a conda environment for the project :
 ```bash
