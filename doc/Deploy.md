@@ -125,7 +125,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ifconfig
    ```
    <p align="center">
-    <img src="ifconfig.jpeg" width="500">
+    <img src="ifconfig.png" width="500">
     <br>
    </p>
    
