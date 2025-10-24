@@ -5,32 +5,10 @@
 
 <p align="center">
   <b>Simulation IsaacLab</b>
-  <img src="isaaclab.gif" width="700">
+  <img src="robot2.gif" width="700">
   <br>
 </p>
 
-
-
-
-
-
-<table align="center" style="border-collapse:collapse;">
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Deploy on real robot </div>
-</th>
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Real time Kalman filter</div>
-</th>
-
-  <tr>
-    <td style="width:50%; text-align:center;">
-      <img src="robot2.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-    <td style="width:50%; text-align:center;">
-      <img src="rviz2.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-  </tr>
-</table>
 
 
 ## 📁 Architecture of this section
