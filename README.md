@@ -67,7 +67,7 @@ deploy_go2/
 │
 ├── unitree_sdk2_python/        # SDK Unitree
 │
-├── go2_odometry/               # Kalman Filter for Go2
+├── go2_ws/                     # Kalman Filter for Go2 (Inria Paris)
 │
 └── README.md                 
 
