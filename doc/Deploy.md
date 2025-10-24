@@ -5,7 +5,7 @@
 
 <p align="center">
   <b>Simulation IsaacLab</b>
-  <img src="doc/isaaclab.gif" width="700">
+  <img src="isaaclab.gif" width="700">
   <br>
 </p>
 
@@ -24,10 +24,10 @@
 
   <tr>
     <td style="width:50%; text-align:center;">
-      <img src="doc/robot2.gif" style="width:100%; display:block; margin:auto;">
+      <img src="robot2.gif" style="width:100%; display:block; margin:auto;">
     </td>
     <td style="width:50%; text-align:center;">
-      <img src="doc/rviz2.gif" style="width:100%; display:block; margin:auto;">
+      <img src="rviz2.gif" style="width:100%; display:block; margin:auto;">
     </td>
   </tr>
 </table>
