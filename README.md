@@ -90,7 +90,9 @@ Isaaclab
 <h2 align="center">🔧 Installation Guides🔧</h2> 
 
 [📘 How to train Reinforcement Learning (RL) policies on **IsaacLab Simulation**](doc/Isaaclab.md)
+
 [📘 How to **deploy models on the real Go2 robot** via the Unitree SDK](doc/Deploy.md)
+
 [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md)
 
 ---
