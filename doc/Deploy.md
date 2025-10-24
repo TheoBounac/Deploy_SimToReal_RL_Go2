@@ -119,13 +119,21 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <img src="ethernet.jpeg" width="500">
     <br>
    </p>
+3. Collect the network interface with :
 
+   ```bash
+   ifconfig
+   ```
+   <p align="center">
+    <img src="ifconfig.jpeg" width="500">
+    <br>
+   </p>
    
-2. Navigate to `deploy_real`:
+3. Navigate to `deploy_real`:
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
-3. Run `deploy_real_isaaclab.py`:
+4. Run `deploy_real_isaaclab.py`:
    ```bash
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
