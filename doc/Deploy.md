@@ -3,6 +3,36 @@
 
 **This section aims to **deploy** on the Go2 robot (Unitrre), a low level RL model (policy)**
 
+<p align="center">
+  <b>Simulation IsaacLab</b>
+  <img src="doc/isaaclab.gif" width="700">
+  <br>
+</p>
+
+
+
+
+
+
+<table align="center" style="border-collapse:collapse;">
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">Deploy on real robot </div>
+</th>
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">Real time Kalman filter</div>
+</th>
+
+  <tr>
+    <td style="width:50%; text-align:center;">
+      <img src="doc/robot2.gif" style="width:100%; display:block; margin:auto;">
+    </td>
+    <td style="width:50%; text-align:center;">
+      <img src="doc/rviz2.gif" style="width:100%; display:block; margin:auto;">
+    </td>
+  </tr>
+</table>
+
+
 ## 📁 Architecture of this section
 
 ```
