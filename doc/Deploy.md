@@ -5,7 +5,7 @@
 
 
 <p align="center">
-  <b>Deploy on real robot Go2</b>
+  <b> Deploy on real robot Go2</b>
   <img src="robot2.gif" width="700">
   <br>
 </p>
