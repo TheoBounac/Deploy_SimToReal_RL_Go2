@@ -99,9 +99,10 @@ pip install -e .
 
 ---
 ###  4️⃣ Clone Go2_odometry
-unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+Install the Kalman filter for the Go2 :
 
-https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file
+[Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
+
 
 ---
 
