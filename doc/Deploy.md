@@ -89,7 +89,7 @@ git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 ```
 Environment Variable :
 ```bash
-echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' >> ~/.bashrc
+echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' 
 ```
 Navigate to the directory and install it:
 ```bash
