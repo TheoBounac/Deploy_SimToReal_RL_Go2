@@ -1,7 +1,7 @@
 # <h2 align="center">DEPLOY</h2>
 
 
-**This section aims to **deploy** on the Go2 robot (Unitrre), a low level RL model (policy)**
+**This section aims to **deploy** on the Go2 robot (Unitrre), a low level RL model (policy). You can either train an RL model in IsaacLab (see (How to train RL policies in IsaacLab Simulation)[https://github.com/TheoBounac/Deploy_SimToReal_RL_Go2/blob/main/doc/Isaaclab.md]) or use a pre-trained model provided in this project.**
 
 
 <p align="center">
