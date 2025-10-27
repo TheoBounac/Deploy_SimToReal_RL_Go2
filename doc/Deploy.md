@@ -85,6 +85,7 @@ unitree_sdk2py is a library used for communication with **Unitree** robots in py
 
 Clone the repository using Git :
 ```bash
+cd ~/Deploy_SimToReal_Go2
 git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
 ```
 Environment Variable :
