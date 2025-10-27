@@ -89,10 +89,8 @@ Isaaclab
 ---
 <h2 align="center">🔧 Installation Guides🔧</h2> 
 As mentioned earlier, this project is divided into two main parts:
-
   1. Training a reinforcement learning (RL) model in IsaacLab
   2. Deploying the trained model on the real Unitree Go2 robot
-
 If you only want to deploy an RL model, you can skip the IsaacLab training tutorial. However, make sure to use the provided model, as it follows a specific observation structure required for deployment.
 
 [📘 How to train Reinforcement Learning (RL) policies on **IsaacLab Simulation**](doc/Isaaclab.md)
