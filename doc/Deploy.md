@@ -145,7 +145,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ```
 4. Run `deploy_real_isaaclab.py` with your network interface :
    ```bash
-   echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' 
+   export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
 
