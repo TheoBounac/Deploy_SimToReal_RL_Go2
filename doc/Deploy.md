@@ -115,6 +115,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    conda activate env_isaaclab
    ```
 2. Connect the robot with ethernet
+   
    Go to Settings/Network and then IPv4. Fill the gaps as follows :
    <p align="center">
     <img src="ethernet.jpeg" width="500">
