@@ -121,7 +121,9 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <img src="ethernet.jpeg" width="500">
     <br>
    </p>
-4. Collect the network interface with :
+4. Collect the network interface
+
+   Type in the terminal, and collect the adress :
 
    ```bash
    ifconfig
