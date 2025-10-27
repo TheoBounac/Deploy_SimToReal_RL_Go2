@@ -103,7 +103,9 @@ Isaaclab
 |--------------|---------|
 |  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
 |  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
-|  **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
+|  **unitree_rl_gym** | [[https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)]([https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)) |
+|  **Kalman filter for Go2** | [[](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)]([https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)) |
+
 
 
 ---
