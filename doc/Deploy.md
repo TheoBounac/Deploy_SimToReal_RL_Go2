@@ -103,7 +103,7 @@ Install the Kalman filter for the Go2 :
 
 [Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
 
-[📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md)
+[📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](Deploy_with_Kalman_filter.md)
 
 ---
 
