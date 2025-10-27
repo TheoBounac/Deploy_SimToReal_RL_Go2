@@ -42,7 +42,7 @@ It also includes the use of a **Kalman filter** for pose and velocity estimation
 
 This project implements a complete **Sim-to-Real** pipeline:
 
- - 🎮 How to train Reinforcement Learning (RL) policies on **IsaacLab Simulation**
+ - 🎮 How to train Reinforcement Learning (RL) policies in **IsaacLab Simulation**
 
  - 🤖 How to **deploy models on the real Go2 robot** via the Unitree SDK
 
