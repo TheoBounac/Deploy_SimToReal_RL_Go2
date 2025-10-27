@@ -117,7 +117,7 @@ These are the repositories I used for my project :
 
 **Théo Bounaceur**  
 Laboratory **LORIA** (**CNRS** / **University of Lorraine**), Nancy in France  
-🧬 Développement : Reinforcment Learning · Unitree robots · Anymal · IsaacLab · ROS 2 · Unitree SDK2  
+🧬 Développement : Reinforcement Learning · Unitree robots · Anymal · IsaacLab · ROS 2 · Unitree SDK2  
 📫 Contact : theo.bounaceur@loria.fr
 
 ---
