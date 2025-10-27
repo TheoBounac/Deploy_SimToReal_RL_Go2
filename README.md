@@ -103,8 +103,8 @@ Isaaclab
 |--------------|---------|
 |  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
 |  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
-|  **unitree_rl_gym** | [[https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)]([https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)) |
-|  **Kalman filter for Go2** | [[](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)]([https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)) |
+|  **unitree_rl_gym** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/unitreerobotics/unitree_rl_gym/tree/main)) |
+|  **Kalman filter for Go2** | [https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)) |
 
 
 
