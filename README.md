@@ -63,7 +63,7 @@ deploy_go2/
 │
 ├── pre_train/                  # Pre-trained RL models (policies)
 │   ├── policy_rough.pt
-│   └── ...
+│   └── policy_rough_2.pt
 │
 ├── unitree_sdk2_python/        # SDK Unitree
 │
