@@ -88,7 +88,7 @@ Isaaclab
 
 ---
 <h2 align="center">🔧 Installation Guides🔧</h2> 
-As mentioned earlier, this project is divided into two main parts:
+As mentioned earlier, this project is divided into two main parts :
 
   1. Training a reinforcement learning (RL) model in IsaacLab
   3. Deploying the trained model on the real Unitree Go2 robot
