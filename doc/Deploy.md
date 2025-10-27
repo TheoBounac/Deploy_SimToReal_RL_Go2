@@ -137,7 +137,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
-4. Run `deploy_real_isaaclab.py`:
+4. Run `deploy_real_isaaclab.py` with your network interface :
    ```bash
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
