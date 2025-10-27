@@ -83,7 +83,7 @@ Isaaclab
 | **Python** | 3.10+ |
 | **ROS 2** | Humble |
 | **Isaac Sim / Isaac Lab** | 4.0.0+ |
-| **CUDA (optionnel)** | 11.8+ |
+| **CUDA ** | 11.8+ |
 
 
 ---
