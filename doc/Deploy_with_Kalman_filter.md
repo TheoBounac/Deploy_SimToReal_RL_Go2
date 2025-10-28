@@ -96,8 +96,7 @@ sudo apt install -y \
 ---
 ## 5️⃣ 🏗️ Build and install the Invariant EKF (C++ lib)
 
-**Invariant-EKF uses JRL cmake modules that require `cmake >= 3.22`.**  
-We’ll ensure CMake is recent enough from Conda and set the project minimum accordingly.
+**Invariant-EKF uses JRL cmake modules that require `cmake >= 3.22`.** We’ll ensure CMake is recent enough from Conda and set the project minimum accordingly.
 
 ```bash
 # Make sure CMake is recent enough
