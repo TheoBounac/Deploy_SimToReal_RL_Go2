@@ -146,7 +146,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
 
----
+--
 
 
 
