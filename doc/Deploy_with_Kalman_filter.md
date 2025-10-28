@@ -161,41 +161,18 @@ pip install --force-reinstall "numpy==1.26.4"
 
 Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch uses `inekf_odom.py` instead of the installed name.
 
-To fix that, follow the two following steps.
-
-### 8.1 Fix `CMakeLists.txt` (install Python executables)
-Open `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
+To fix that, pen `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
 ```bash
 nano ~/kalman_filter/src/go2_odometry/CMakeLists.txt 
 ```
 
 and set the **Install Python executables** :
-
 ```cmake
 # === Install Python executables ===
-install(PROGRAMS scripts/fake_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME fake_odom)
-install(PROGRAMS scripts/dumb_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME dumb_odom)
-install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} RENAME mocap_base_pose)
-install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom)
-```
-
-
-### 8.2 Fix the launch file name
-Open `~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py` with :
-```bash
-nano ~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py 
-```
-
-and errase the `.py` :
-
-```python
-executable="inekf_odom.py",
-```
-
-becomes :
-
-```python
-executable="inekf_odom",
+install(PROGRAMS scripts/fake_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME fake_odom.py)
+install(PROGRAMS scripts/dumb_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME dumb_odom.py)
+install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} RENAME mocap_base_pose.py)
+install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom.py)
 ```
 
 
