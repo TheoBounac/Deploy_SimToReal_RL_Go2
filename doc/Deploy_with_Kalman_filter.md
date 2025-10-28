@@ -234,7 +234,7 @@ Expected:
 
 
 ---
-## 🔟 🧪 Quick run: **fake odom** (debug)
+## 🔟  Quick run: **fake odom** (debug)
 
 > Why: validate TF, URDF, and topic wiring in seconds.
 
@@ -260,7 +260,6 @@ ros2 topic echo /odometry/filtered
 <img src="fake.png" width="1100">
 <br>
 </p>
-
 
 You should see fixed poses at `(x=0, y=0, z=base_height)` and the odometry/filtered streams.
 
