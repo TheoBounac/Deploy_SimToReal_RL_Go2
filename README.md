@@ -137,7 +137,7 @@ Laboratory **LORIA** (CNRS / University of Lorraine), Nancy, France
 📫 Contact: theo.bounaceur@loria.fr  
 
 **Supervisors / Advisors:**  
-- Adrien Guénard  
+- Adrien Guenard  
 - Cyril Regan  
 
 
