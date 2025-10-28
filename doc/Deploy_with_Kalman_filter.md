@@ -21,7 +21,7 @@
 | **ROS 2** | Humble — installed via `apt` in `/opt/ros/humble` |
 | **Conda** | Miniconda or Anaconda (latest) |
 | **Python** | 3.10 or newer |
-| **Workspace** | No spaces in path → e.g. `~/kalman_filter` ✅ (avoid `~/kalman Filter`) |
+
 
 
 ---
