@@ -84,6 +84,7 @@ Isaaclab
 
 |  Component |  Recommended Version |
 |--------------|------------------------|
+| Go2 robot (Unitree) | Edu version with foot sensors |
 | **Ubuntu** | 22.04 LTS |
 | **Python** | 3.10+ |
 | **ROS 2** | Humble |
