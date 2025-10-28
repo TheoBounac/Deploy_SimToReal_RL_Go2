@@ -184,13 +184,13 @@ source /opt/ros/humble/setup.bash
 
 cd ~/kalman_filter
 colcon build --symlink-install
+colcon build --symlink-install
 ```
 
 > If you previously built with wrong settings, do a clean rebuild:
 > ```bash
 > rm -rf build install log
 > colcon build --symlink-install
->  colcon build --symlink-install
 > ```
 
 
