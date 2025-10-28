@@ -99,9 +99,9 @@ pip install -e .
 
 ---
 ###  4️⃣ Clone Go2_odometry
-Install the Kalman filter for the Go2 :
+Install the Kalman filter for the Go2 : [Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
 
-[Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
+Here is a full tutorial on how to install this library :
 
 [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](Deploy_with_Kalman_filter.md)
 
