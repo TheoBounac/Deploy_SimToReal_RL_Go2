@@ -1,5 +1,5 @@
  <p align="center">
-  <img src="go2.png" width="1000">
+  <img src="doc/go2.png" width="1000">
   <br>
  </p>
  
