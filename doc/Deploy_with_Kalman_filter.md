@@ -6,8 +6,8 @@
 
 **Go2 Odometry** is an INRIA Paris GitLab project that implements a Kalman-based state estimation pipeline for the Unitree **Go2 quadruped robot**.  
 It provides robust **pose** and **velocity estimation** using an Invariant Extended Kalman Filter (InEKF) integrated with the robot’s onboard sensors.  
-
 This guide explains, step by step, how to set up the complete environment required to run the Kalman filter and how to **visualize the Go2 robot in real time** using **RViz2**.
+
 ---
 ## ⚙️ System Requirements
 
