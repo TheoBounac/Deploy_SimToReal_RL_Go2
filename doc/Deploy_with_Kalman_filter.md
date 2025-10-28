@@ -76,7 +76,10 @@ git clone https://github.com/inria-paris-robotics-lab/invariant-ekf.git
 # D) Odometry stack (fake, mocap, InEKF wrapper & launch files)
 git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
-
+<p align="center">
+<img src="files.png" width="500">
+<br>
+</p>
 
 ---
 ## 4️⃣ 🧰 System dependencies via apt
