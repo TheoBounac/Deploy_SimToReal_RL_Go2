@@ -105,6 +105,9 @@ If you only want to deploy an RL model, you can skip the IsaacLab training tutor
 
 [📘 How to **deploy models on the real Go2 robot** via the Unitree SDK](doc/Deploy.md)
 
+Full tutorial for kalman filter from Inria Paris :
+
+[📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](Deploy_with_Kalman_filter.md)
 
 
 ---
