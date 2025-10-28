@@ -116,7 +116,7 @@ Open `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` with :
 nano ~/kalman_filter/src/invariant-ekf/CMakeLists.txt
 ```
 <p align="center">
-<img src="cmake.png" width="500">
+<img src="cmake.png" width="900">
 <br>
 </p>
 
