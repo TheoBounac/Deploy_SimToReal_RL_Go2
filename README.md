@@ -107,7 +107,7 @@ As mentioned earlier, this project is divided into two main parts :
 
 Full tutorial for kalman filter from Inria Paris :
 
-[📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](Deploy_with_Kalman_filter.md)
+[📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md)
 
 
 ---
