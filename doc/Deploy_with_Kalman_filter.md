@@ -315,21 +315,6 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 | KDL warning about inertia on root link | KDL limitation with URDF root inertias | Harmless; ignore or add a dummy base if you want a clean console |
 
 
----
-## ✅ Final checklist
-
-- [ ] Conda env with **Python 3.10** and **NumPy 1.26.4**
-- [ ] `cmake >= 3.22` for invariant-ekf
-- [ ] `python3-pinocchio` (apt) available
-- [ ] `empy`, `catkin-pkg`, `lark-parser`, `pyyaml` inside **Conda**
-- [ ] `go2_odometry` **CMake install** fixed (Python executables with `RENAME`)
-- [ ] Launch **fixed** (`executable="inekf_odom"`)
-- [ ] `colcon build --symlink-install` completes
-- [ ] Fake odom runs
-- [ ] InEKF runs with `odom_type:=use_full_odom`
-
-
----
 ## 📝 Rationale: why the `LD_PRELOAD`?
 
 When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols). Pre-loading the system libstdc++:
@@ -343,8 +328,5 @@ tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBC
 
 ---
 ## 🎉 You’re done!
-
-You now have a **reproducible, documented** InEKF setup for Unitree Go2 with ROS 2 Humble.  
-If you want, create a tiny `test_go2_odometry.sh` that sources ROS 2 + your workspace, sets `LD_PRELOAD`, and launches the filter in one go — handy for demos and CI.
 
 Happy state estimation 🧪🤖!
