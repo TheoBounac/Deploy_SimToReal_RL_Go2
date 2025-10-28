@@ -39,9 +39,10 @@ conda create -n go2_odometry_env python=3.10 -y
 conda activate go2_odometry_env
 ```
 
-Version of numpy that plays nicely with ROS 2 Humble and Pinocchio :
+Versions of libraries that play nicely with ROS 2 Humble and Pinocchio :
 ```bash
 pip install "numpy==1.26.4"
+pip install "empy==3.3.4" "catkin-pkg==1.1.0" "lark-parser==0.12.0" "pyyaml==6.0.1"
 pip install colcon-common-extensions
 ```
 
