@@ -1,10 +1,7 @@
 # 🧭 Go2 Odometry — **Invariant EKF (InEKF) Full Setup Guide**
 *A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations and commands.
 
-> ✅ This guide is intentionally verbose and annotated so you can **understand why** each step matters and quickly debug if something goes off-track.
-
 ---
-
 ## ✨ What you’ll get
 
 - A clean Conda environment (Python 3.10) **compatible with ROS 2 Humble**.
@@ -14,14 +11,21 @@
 - Clear **fixes** for recent upstream changes (CMake/launch adjustments).
 - A toolbox of **troubleshooting** tips for Conda × ROS2 stacks.
 
+
 ---
+## ⚙️ System Requirements
 
-## 🧱 Prerequisites
+|  **Component** |  **Recommended Setup** |
+|------------------|--------------------------|
+| **Ubuntu** | 22.04 LTS (Jammy) |
+| **ROS 2** | Humble — installed via `apt` in `/opt/ros/humble` |
+| **Conda** | Miniconda or Anaconda (latest) |
+| **Python** | 3.10 or newer |
+| **Workspace** | No spaces in path → e.g. `~/kalman_filter` ✅ (avoid `~/kalman Filter`) |
 
-- Ubuntu **22.04** (Jammy)  
-- **ROS 2 Humble** installed via `apt` in `/opt/ros/humble`  
-- **Conda** installed (Miniconda/Anaconda)  
-- A ROS workspace **without spaces** in its path (e.g., `~/kalman_filter` — avoid `~/kalman Filter`)
+
+
+## 1️⃣ 🐍 Create & prepare the Conda environment
 
 Create your workspace:
 ```bash
@@ -29,9 +33,6 @@ mkdir -p ~/kalman_filter/src
 ```
 
 ---
-
-## 1️⃣ 🐍 Create & prepare the Conda environment
-
 > Why: ROS 2’s Python bindings and Pinocchio were built against **NumPy 1.x**. Using NumPy 2.x will crash C++ bindings (e.g., `_ARRAY_API not found`, segfaults). We pin NumPy to **1.26.4**.
 
 ```bash
