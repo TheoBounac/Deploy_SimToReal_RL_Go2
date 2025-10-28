@@ -225,7 +225,7 @@ Expected:
 `go2_description`, `go2_odometry` and `unitree_api`, `unitree_go`, `unitree_hg`, `unitree_ros2_example`.
 
 <p align="center">
-<img src="verif.png" width="500">
+<img src="verif.png" width="800">
 <br>
 </p>
 
