@@ -99,11 +99,11 @@ As mentioned earlier, this project is divided into two main parts :
   1. Training a reinforcement learning (RL) model in IsaacLab
   3. Deploying the trained model on the real Unitree Go2 robot
      
-If you only want to deploy an RL model, you can skip the IsaacLab training tutorial. However, make sure to use the provided model, as it follows a specific observation structure required for deployment.
+ I strongly suggest you to follow **Part 1** then **Part 2**. If you only want to deploy an RL model, you can skip the IsaacLab training tutorial. However, make sure to use the provided model, as it follows a specific observation structure required for deployment.
 
-[📘 How to train Reinforcement Learning (RL) policies on **IsaacLab Simulation**](doc/Isaaclab.md)
+**Part 1** : [📘 How to train Reinforcement Learning (RL) policies on **IsaacLab Simulation**](doc/Isaaclab.md)
 
-[📘 How to **deploy models on the real Go2 robot** via the Unitree SDK](doc/Deploy.md)
+**Part 2** : [📘 How to **deploy models on the real Go2 robot** via the Unitree SDK](doc/Deploy.md)
 
 Full tutorial for kalman filter from Inria Paris :
 
