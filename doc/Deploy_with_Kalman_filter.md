@@ -104,7 +104,13 @@ conda install -c conda-forge cmake=3.28.3 -y
 cmake --version   # should be >= 3.22
 ```
 
-Edit `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` and set:
+Open `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` with :
+
+```bash
+nano ~/kalman_filter/src/invariant-ekf/CMakeLists.txt
+```
+
+And set:
 ```cmake
 cmake_minimum_required(VERSION 3.22)
 ```
