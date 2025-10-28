@@ -128,7 +128,7 @@ These are the repositories I used for my project :
 ---
 
 
-## 👥 Authors & Contributors
+## 👥 Author & Contributors
 
 **Author:**  
 Théo Bounaceur  
