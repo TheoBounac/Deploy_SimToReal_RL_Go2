@@ -24,7 +24,7 @@
 | **Workspace** | No spaces in path → e.g. `~/kalman_filter` ✅ (avoid `~/kalman Filter`) |
 
 
-
+---
 ## 1️⃣ 🐍 Create & prepare the Conda environment
 
 Create your workspace:
@@ -32,7 +32,6 @@ Create your workspace:
 mkdir -p ~/kalman_filter/src
 ```
 
----
 > Why: ROS 2’s Python bindings and Pinocchio were built against **NumPy 1.x**. Using NumPy 2.x will crash C++ bindings (e.g., `_ARRAY_API not found`, segfaults). We pin NumPy to **1.26.4**.
 
 ```bash
@@ -46,8 +45,8 @@ pip install "numpy==1.26.4" "pyyaml==6.0.1" "matplotlib==3.8.4"
 pip install colcon-common-extensions
 ```
 
----
 
+---
 ## 2️⃣ 🤖 Ensure ROS 2 Humble is installed & sourced
 
 > Why: all `ros2`, `colcon`, and `ament` commands must see the ROS environment.
@@ -59,8 +58,8 @@ source /opt/ros/humble/setup.bash
 
 *(You may add that line to your `~/.bashrc`, but keep it in mind when juggling multiple ROS/Conda envs.)*
 
----
 
+---
 ## 3️⃣ ⬇️ Clone the required repositories
 
 ```bash
@@ -79,8 +78,8 @@ git clone https://github.com/inria-paris-robotics-lab/invariant-ekf.git
 git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
 
----
 
+---
 ## 4️⃣ 🧰 System dependencies via apt
 
 > Why: we rely on CycloneDDS for Unitree compatibility (already provided on Humble), YAML C++ libs, and **Pinocchio** Python bindings.
@@ -96,8 +95,8 @@ sudo apt install -y \
 
 > ℹ️ **No need to rebuild CycloneDDS** on Humble — use the distro packages.
 
----
 
+---
 ## 5️⃣ 🏗️ Build and install the Invariant EKF (C++ lib)
 
 **Invariant-EKF uses JRL cmake modules that require `cmake >= 3.22`.**  
@@ -136,8 +135,8 @@ sudo ldconfig
 >   -DNUMPY_INCLUDE_DIR="$(python -c 'import numpy; print(numpy.get_include())')"
 > ```
 
----
 
+---
 ## 6️⃣ 🧩 Verify Pinocchio ↔ NumPy compatibility
 
 ```bash
@@ -154,8 +153,8 @@ If NumPy got bumped to 2.x by a stray install, **force**:
 pip install --force-reinstall "numpy==1.26.4"
 ```
 
----
 
+---
 ## 7️⃣ 🧪 Python deps for ROSIDL (inside Conda)
 
 > Why: ROSIDL runs with **your Conda Python**, not the system Python. Missing these will break message generation (`empy`, `catkin_pkg`, `lark-parser`, `pyyaml`).
@@ -164,8 +163,8 @@ pip install --force-reinstall "numpy==1.26.4"
 pip install "empy==3.3.4" "catkin-pkg==1.1.0" "lark-parser==0.12.0" "pyyaml==6.0.1"
 ```
 
----
 
+---
 ## 8️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
 
 Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch used `inekf_odom.py` instead of the installed name.
@@ -197,8 +196,8 @@ to:
 executable="inekf_odom",
 ```
 
----
 
+---
 ## 9️⃣ 🧱 Build the workspace
 
 ```bash
@@ -215,8 +214,8 @@ colcon build --symlink-install
 > colcon build --symlink-install
 > ```
 
----
 
+---
 ## 🔟 🔍 Sanity checks
 
 ```bash
@@ -238,8 +237,8 @@ Expected:
 > ```
 > That’s fine — **inekf** is a C++ library, not a ROS 2 Python package.
 
----
 
+---
 ## 1️⃣1️⃣ 🧪 Quick run: **fake odom** (debug)
 
 > Why: validate TF, URDF, and topic wiring in seconds.
@@ -264,8 +263,8 @@ ros2 topic echo /odometry/filtered
 
 You should see fixed poses at `(x=0, y=0, z=base_height)` and TF streams.
 
----
 
+---
 ## 1️⃣2️⃣ 🚀 Run the **real filter** (InEKF)
 
 ```bash
@@ -293,8 +292,8 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 
 > 🔭 **RViz tip:** fixed frame = `odom`; add `TF`, `Odometry` (`/odometry/filtered`), and `IMU`.
 
----
 
+---
 ## 🧯 Troubleshooting & common pitfalls
 
 | Symptom | Cause | Fix |
@@ -306,8 +305,8 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 | `executable 'inekf_odom.py' not found` | Launch expects `.py`; CMake installs without `.py` | **Fix launch** → `executable="inekf_odom"` **and** ensure CMake `install(PROGRAMS ... RENAME inekf_odom)` |
 | KDL warning about inertia on root link | KDL limitation with URDF root inertias | Harmless; ignore or add a dummy base if you want a clean console |
 
----
 
+---
 ## ✅ Final checklist
 
 - [ ] Conda env with **Python 3.10** and **NumPy 1.26.4**
@@ -320,8 +319,8 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 - [ ] Fake odom runs
 - [ ] InEKF runs with `odom_type:=use_full_odom`
 
----
 
+---
 ## 📝 Rationale: why the `LD_PRELOAD`?
 
 When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols). Pre-loading the system libstdc++:
@@ -332,8 +331,8 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
 
----
 
+---
 ## 🎉 You’re done!
 
 You now have a **reproducible, documented** InEKF setup for Unitree Go2 with ROS 2 Humble.  
