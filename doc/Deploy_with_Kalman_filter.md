@@ -127,7 +127,7 @@ pip install --upgrade numpy==1.26.4
 ```
 ---
 
-Now build & install:
+Now build & install :
 ```bash
 cd ~/kalman_filter/src/invariant-ekf
 rm -rf build && mkdir build && cd build
@@ -151,7 +151,7 @@ EOF
 ```
 
 Expected: **NumPy 1.26.x**; Pinocchio loads from `/opt/ros/humble/...`.  
-If NumPy got bumped to 2.x by a stray install, **force**:
+If NumPy got bumped to 2.x by a stray install, **force** :
 ```bash
 pip install --force-reinstall "numpy==1.26.4"
 ```
@@ -159,10 +159,17 @@ pip install --force-reinstall "numpy==1.26.4"
 ---
 ## 7️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
 
-Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch used `inekf_odom.py` instead of the installed name.
+Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch uses `inekf_odom.py` instead of the installed name.
+
+To fix that, follow the two following steps.
 
 ### 8.1 Fix `CMakeLists.txt` (install Python executables)
-Edit `~/kalman_filter/src/go2_odometry/CMakeLists.txt` and make sure you have:
+Open `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
+```bash
+nano ~/kalman_filter/src/go2_odometry/CMakeLists.txt 
+```
+
+and set the **Install Python executables** :
 
 ```cmake
 # === Install Python executables ===
@@ -172,17 +179,20 @@ install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} REN
 install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom)
 ```
 
-> 🧠 Why `RENAME`? ROS expects **executable files without `.py`** in `lib/${PROJECT_NAME}`.  
-> The rename gives you `.../lib/go2_odometry/inekf_odom` which launch files can call directly.
 
 ### 8.2 Fix the launch file name
-Edit `~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py` and change:
+Open `~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py` with :
+```bash
+nano ~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py 
+```
+
+and errase the `.py` :
 
 ```python
 executable="inekf_odom.py",
 ```
 
-to:
+becomes :
 
 ```python
 executable="inekf_odom",
