@@ -68,14 +68,14 @@ pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorc
 ```
 
 
-
+---
 ###  2️⃣ Clone the project
 
 ```bash
 git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
 cd Deploy_SimToReal_Go2
 ```
----
+
 Install depedencies :
 ```bash
 pip install -r requirements.txt
