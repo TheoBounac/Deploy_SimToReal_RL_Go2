@@ -27,21 +27,21 @@
 ---
 ## 1️⃣ 🐍 Create & prepare the Conda environment
 
-Create your workspace:
+Create your workspace :
 ```bash
 mkdir -p ~/kalman_filter/src
 ```
 
-> Why: ROS 2’s Python bindings and Pinocchio were built against **NumPy 1.x**. Using NumPy 2.x will crash C++ bindings (e.g., `_ARRAY_API not found`, segfaults). We pin NumPy to **1.26.4**.
 
+Create the env conda :
 ```bash
 conda create -n go2_odometry_env python=3.10 -y
 conda activate go2_odometry_env
+```
 
-# Pin the versions that play nicely with ROS 2 Humble and Pinocchio
-pip install "numpy==1.26.4" "pyyaml==6.0.1" "matplotlib==3.8.4"
-
-# Useful in-Python colcon extensions (optional but handy)
+# Versions that play nicely with ROS 2 Humble and Pinocchio
+```bash
+pip install "numpy==1.26.4" "pyyaml==6.0.1" 
 pip install colcon-common-extensions
 ```
 
