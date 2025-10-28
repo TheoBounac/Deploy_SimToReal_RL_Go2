@@ -266,7 +266,7 @@ ros2 topic echo /odometry/filtered
 </p>
 
 
-You should see fixed poses at `(x=0, y=0, z=base_height)` and TF streams.
+You should see fixed poses at `(x=0, y=0, z=base_height)` and the odometry/filtered streams.
 
 
 ---
