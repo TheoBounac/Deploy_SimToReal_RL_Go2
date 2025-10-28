@@ -115,6 +115,7 @@ And set :
 cmake_minimum_required(VERSION 3.22)
 ```
 
+---
 Confirm NumPy is visible to CMake (it will be queried via eigenpy during config):
 ```bash
 python -c "import numpy; print(numpy.__version__)"  # must print 1.26.4
@@ -123,7 +124,7 @@ If not (Troubleshooting), just reinstall numpy :
 ```bash
 pip install --upgrade numpy==1.26.4
 ```
-
+---
 
 Now build & install:
 ```bash
@@ -135,12 +136,6 @@ sudo make install
 sudo ldconfig
 ```
 
-> 💡 If CMake complains it “Failed to detect numpy”, pass the interpreter/include explicitly:
-> ```bash
-> cmake .. \
->   -DPYTHON_EXECUTABLE="$(which python)" \
->   -DNUMPY_INCLUDE_DIR="$(python -c 'import numpy; print(numpy.get_include())')"
-> ```
 
 
 ---
