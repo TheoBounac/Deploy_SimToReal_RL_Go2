@@ -20,7 +20,7 @@
 | **Ubuntu** | 22.04 LTS (Jammy) |
 | **ROS 2** | Humble — installed via `apt` in `/opt/ros/humble` |
 | **Conda** | Miniconda or Anaconda (latest) |
-| **Python** | 3.10 or newer |
+| **Python** | 3.10  |
 
 
 
