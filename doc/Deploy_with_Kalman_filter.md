@@ -214,6 +214,7 @@ colcon build --symlink-install
 > ```bash
 > rm -rf build install log
 > colcon build --symlink-install
+>  colcon build --symlink-install
 > ```
 
 
