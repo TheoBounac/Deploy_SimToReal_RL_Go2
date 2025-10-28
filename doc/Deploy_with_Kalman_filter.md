@@ -80,7 +80,8 @@ git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ---
 ## 4️⃣ 🧰 System dependencies via apt
 
-> Why: we rely on CycloneDDS for Unitree compatibility (already provided on Humble), YAML C++ libs, and **Pinocchio** Python bindings.
+This command installs all the required system components to run the Go2's ROS 2 communication and InEKF Kalman filter — including the DDS transport layer, IDL message generation, YAML parsing, and Pinocchio dynamics library :
+
 
 ```bash
 sudo apt update
@@ -90,8 +91,6 @@ sudo apt install -y \
   libyaml-cpp-dev \
   python3-pinocchio
 ```
-
-> ℹ️ **No need to rebuild CycloneDDS** on Humble — use the distro packages.
 
 
 ---
