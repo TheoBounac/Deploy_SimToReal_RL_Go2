@@ -58,7 +58,7 @@ source /opt/ros/humble/setup.bash
 
 
 ---
-## 3️⃣ ⬇️ Clone the required repositories
+## 3️⃣ 📂 Clone the required repositories
 
 ```bash
 cd ~/kalman_filter/src
