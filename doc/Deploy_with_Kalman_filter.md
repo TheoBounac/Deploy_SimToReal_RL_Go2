@@ -1,7 +1,7 @@
 # <h2 align="center">Go2 Odometry — **Invariant EKF (InEKF) Full Setup Guide**</h2>
 
  <p align="center">
-  <img src="preskal.png" width="1000">
+  <img src="preskalm.png" width="1100">
   <br>
  </p>
 
