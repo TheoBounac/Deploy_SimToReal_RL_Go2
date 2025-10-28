@@ -157,7 +157,7 @@ pip install --force-reinstall "numpy==1.26.4"
 ```
 
 ---
-## 7️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
+## 7️⃣ 🔧 **Required fixes** for `go2_odometry` (InEKF executable)
 
 Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch uses `inekf_odom.py` instead of the installed name.
 
@@ -200,7 +200,7 @@ executable="inekf_odom",
 
 
 ---
-## 8️⃣ 🧱 Build the workspace
+## 8️⃣ 🏗️ Build the workspace
 
 ```bash
 # Always source ROS 2 before colcon
