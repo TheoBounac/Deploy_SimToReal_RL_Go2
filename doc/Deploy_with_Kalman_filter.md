@@ -4,14 +4,10 @@
 ---
 ## Overview
 
-- A clean Conda environment (Python 3.10) **compatible with ROS 2 Humble**.
-- The **Invariant EKF** library compiled and available system-wide.
-- The **go2_odometry** stack (fake odom, mocap, **InEKF** node) built with `colcon`.
-- A **repeatable launch** of the real filter: `odom_type:=use_full_odom`.
-- Clear **fixes** for recent upstream changes (CMake/launch adjustments).
-- A toolbox of **troubleshooting** tips for Conda × ROS2 stacks.
+**Go2 Odometry** is an INRIA Paris GitLab project that implements a Kalman-based state estimation pipeline for the Unitree **Go2 quadruped robot**.  
+It provides robust **pose** and **velocity estimation** using an Invariant Extended Kalman Filter (InEKF) integrated with the robot’s onboard sensors.  
 
-
+This guide explains, step by step, how to set up the complete environment required to run the Kalman filter and how to **visualize the Go2 robot in real time** using **RViz2**.
 ---
 ## ⚙️ System Requirements
 
