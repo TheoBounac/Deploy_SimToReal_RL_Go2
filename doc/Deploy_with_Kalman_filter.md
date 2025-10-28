@@ -1,230 +1,341 @@
-# <h2 align="center">DEPLOY SIM-TO-REAL RL MODEL ON Go2</h2>
+# 🧭 Go2 Odometry — **Invariant EKF (InEKF) Full Setup Guide**
+*A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations, commands, and troubleshooting.*  
 
-
-**This repository aims to train a **Reinforcement Learning (RL)** model on the **Unitree Go2 quadruped robot** in simulation (IsaacLab) and deploy it on the real robot.**
-
-
-<p align="center">
-  <b>Simulation IsaacLab</b>
-  <img src="doc/isaaclab.gif" width="700">
-  <br>
-</p>
-
-
-
-
-
-
-<table align="center" style="border-collapse:collapse;">
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Reality</div>
-</th>
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Reality</div>
-</th>
-
-  <tr>
-    <td style="width:50%; text-align:center;">
-      <img src="doc/isaaclab.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-    <td style="width:50%; text-align:center;">
-      <img src="doc/telsite.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-  </tr>
-</table>
-
-
-
+> ✅ This guide is intentionally verbose and annotated so you can **understand why** each step matters and quickly debug if something goes off-track.
 
 ---
-## Project overview
 
-This project implements a complete **Sim-to-Real** pipeline:
+## ✨ What you’ll get
 
- - 🎮 **IsaacLab Simulation** for training Reinforcement Learning (RL) policies
-
- - 🤖 **Deployment on the real Go2 robot** via the Unitree SDK
-
- - 🔄 **ROS 2 Communication** for real-time control and sensor/command integration
-
-The project combines **Python + ROS 2 + IsaacLab**, enabling training, testing, and transferring an RL policy to the real robot.
+- A clean Conda environment (Python 3.10) **compatible with ROS 2 Humble**.
+- The **Invariant EKF** library compiled and available system-wide.
+- The **go2_odometry** stack (fake odom, mocap, **InEKF** node) built with `colcon`.
+- A **repeatable launch** of the real filter: `odom_type:=use_full_odom`.
+- Clear **fixes** for recent upstream changes (CMake/launch adjustments).
+- A toolbox of **troubleshooting** tips for Conda × ROS2 stacks.
 
 ---
-## 📁 Architecture
 
-```
-deploy_go2/
-│
-├── deploy_real/                # Deployment scripts for Go2
-│   ├── config.py
-│   ├── deploy_real_isaaclab.py
-│   └── node_kalman.py
-│
-├── pre_train/                  # Pre-trained RL models (policies)
-│   ├── policy_rough.pt
-│   └── ...
-│
-├── unitree_sdk2_python/        # SDK Unitree
-│
-├── go2_odometry/               # Kalman Filter for Go2
-│
-└── README.md                 
+## 🧱 Prerequisites
 
-Isaaclab
-```
+- Ubuntu **22.04** (Jammy)  
+- **ROS 2 Humble** installed via `apt` in `/opt/ros/humble`  
+- **Conda** installed (Miniconda/Anaconda)  
+- A ROS workspace **without spaces** in its path (e.g., `~/kalman_filter` — avoid `~/kalman Filter`)
 
----
-## ⚙️ System Requirements
-
-|  Component |  Recommended Version |
-|--------------|------------------------|
-| **Ubuntu** | 22.04 LTS |
-| **Python** | 3.10+ |
-| **ROS 2** | Humble |
-| **Isaac Sim / Isaac Lab** | 4.0.0+ |
-| **CUDA (optionnel)** | 11.8+ |
-
-
----
-<h2 align="center">🔧 Installation Guide🔧</h2> 
-
-###  1️⃣ Env conda setup
-Create a conda environment for the project :
+Create your workspace:
 ```bash
-conda create -n env_isaaclab python=3.10.18
-conda activate env_isaaclab
+mkdir -p ~/kalman_filter/src
 ```
 
 ---
-Ensure the latest pip version is installed. To update pip, run the following command from inside the virtual environment :
-```bash
-pip install --upgrade pip
-```
 
----
-Install a CUDA-enabled PyTorch 2.7.0 build for CUDA 12.8 :
-```bash
-pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
-```
+## 1️⃣ 🐍 Create & prepare the Conda environment
 
-
----
-###  2️⃣ Clone the project
+> Why: ROS 2’s Python bindings and Pinocchio were built against **NumPy 1.x**. Using NumPy 2.x will crash C++ bindings (e.g., `_ARRAY_API not found`, segfaults). We pin NumPy to **1.26.4**.
 
 ```bash
-git clone https://github.com/TheoBounac/Deploy_SimToReal_Go2.git
-cd Deploy_SimToReal_Go2
-```
----
-Install depedencies :
-```bash
-pip install -r requirements.txt
-```
+conda create -n go2_odometry_env python=3.10 -y
+conda activate go2_odometry_env
 
----
-###  3️⃣ Clone SDK Unitree
-unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+# Pin the versions that play nicely with ROS 2 Humble and Pinocchio
+pip install "numpy==1.26.4" "pyyaml==6.0.1" "matplotlib==3.8.4"
 
-Clone the repository using Git :
-```bash
-git clone https://github.com/unitreerobotics/unitree_sdk2_python.git
-```
-Environment Variable :
-```bash
-echo 'export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6' >> ~/.bashrc
-```
-Navigate to the directory and install it:
-```bash
-cd unitree_sdk2_python
-pip install -e .
+# Useful in-Python colcon extensions (optional but handy)
+pip install colcon-common-extensions
 ```
 
 ---
 
-<h2 align="center">🚀 Run the project 🚀</h2> 
+## 2️⃣ 🤖 Ensure ROS 2 Humble is installed & sourced
 
-Once the installation is complete, follow these steps to launch an RL model on the Go2 robot.
+> Why: all `ros2`, `colcon`, and `ament` commands must see the ROS environment.
 
-1. Activate conda env :
-   ```bash
-   conda activate env_isaaclab
-   ```
-2. Navigate to `deploy_real`:
-   ```bash
-   cd ~/Deploy_SimToReal_Go2/deploy_real
-   ```
-3. Run `deploy_real_isaaclab.py`:
-   ```bash
-   python deploy_real_isaaclab.py enp0s31f6 go2.yaml
-   ```
-
----
-
-##  Links
-
-| 🔗 Resources | 📍 Link |
-|--------------|---------|
-|  **IsaacLab (NVIDIA)** | [https://github.com/isaac-sim/IsaacLab](https://github.com/isaac-sim/IsaacLab) |
-|  **Unitree SDK2 Python** | [https://github.com/unitreerobotics/unitree_sdk2_python](https://github.com/unitreerobotics/unitree_sdk2_python) |
-|  **Projet principal** | [https://github.com/TheoBounac/Deploy_SimToReal_Go2](https://github.com/TheoBounac/Deploy_SimToReal_Go2) |
-
-
----
-
-
-##  Author
-
-**Théo Bounaceur**  
-Laboratory **LORIA** (**CNRS** / **University of Lorraine**), Nancy in France  
-🧬 Développement : IsaacLab · ROS 2 · Unitree SDK2  
-📫 Contact : theo.bounaceur@loria.fr
-
----
-
----
-###  4️⃣ Cloner go2_odometry
 ```bash
-cd ..
+# run this in every new terminal session where you use ROS 2
+source /opt/ros/humble/setup.bash
+```
+
+*(You may add that line to your `~/.bashrc`, but keep it in mind when juggling multiple ROS/Conda envs.)*
+
+---
+
+## 3️⃣ ⬇️ Clone the required repositories
+
+```bash
+cd ~/kalman_filter/src
+
+# A) Unitree ROS 2 interface (message definitions, DDS/ROS bridge)
+git clone https://github.com/unitreerobotics/unitree_ros2.git
+
+# B) Go2 URDF & description
+git clone https://github.com/inria-paris-robotics-lab/go2_description.git
+
+# C) Invariant EKF (C++ library)
+git clone https://github.com/inria-paris-robotics-lab/invariant-ekf.git
+
+# D) Odometry stack (fake, mocap, InEKF wrapper & launch files)
 git clone https://github.com/inria-paris-robotics-lab/go2_odometry.git
 ```
 
 ---
-###  5️⃣ Installer Isaaclab
-Cette partie est optionnelle, elle permet d'entraîner sois-même des modèles de RL. Des modèles pré-entraînés sont déja disponibles dans `pre_train`. 
 
-Pour installer Isaaclab, vous pouvez vous référer au [guide isaaclab](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html).
-Les commandes importantes sont rappelées ci-dessous.
+## 4️⃣ 🧰 System dependencies via apt
 
-Install the Isaac Lab packages along with Isaac Sim :
+> Why: we rely on CycloneDDS for Unitree compatibility (already provided on Humble), YAML C++ libs, and **Pinocchio** Python bindings.
+
 ```bash
-pip install isaaclab[isaacsim,all]==2.2.0 --extra-index-url https://pypi.nvidia.com
-```
-Make sure that your virtual environment is activated. Check that the simulator runs as expected :
-```bash
-isaacsim
-```
-
-The first run will prompt users to accept the Nvidia Omniverse License Agreement. To accept the EULA, reply `Yes` when prompted with the below message:
-```bash
-By installing or using Isaac Sim, I agree to the terms of NVIDIA OMNIVERSE LICENSE AGREEMENT (EULA)
-in https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html
-
-Do you accept the EULA ? (Yes/No): Yes
-```
-Cela devrait prendre quelque minutes pour la première run.
-
-Lancer un entrainement du go2 :
-```bash
-cd isaaclab
-./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4080  --max_iterations 9999 --headless
+sudo apt update
+sudo apt install -y \
+  ros-humble-rmw-cyclonedds-cpp \
+  ros-humble-rosidl-generator-dds-idl \
+  libyaml-cpp-dev \
+  python3-pinocchio
 ```
 
-Tester le modèle :
+> ℹ️ **No need to rebuild CycloneDDS** on Humble — use the distro packages.
+
+---
+
+## 5️⃣ 🏗️ Build and install the Invariant EKF (C++ lib)
+
+**Invariant-EKF uses JRL cmake modules that require `cmake >= 3.22`.**  
+We’ll ensure CMake is recent enough from Conda and set the project minimum accordingly.
+
 ```bash
-./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/play.py  --task Isaac-Velocity-Rough-Unitree-Go2-v0  --num_envs 4
+# Make sure CMake is recent enough
+conda install -c conda-forge cmake=3.28.3 -y
+cmake --version   # should be >= 3.22
 ```
- 7️⃣ 8️⃣ 9️⃣ 🔟
 
+Edit `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` and set:
+```cmake
+cmake_minimum_required(VERSION 3.22)
+```
 
+Confirm NumPy is visible to CMake (it will be queried via eigenpy during config):
+```bash
+python -c "import numpy; print(numpy.__version__)"  # must print 1.26.4
+```
 
+Now build & install:
+```bash
+cd ~/kalman_filter/src/invariant-ekf
+rm -rf build && mkdir build && cd build
+cmake ..
+make -j"$(nproc)"
+sudo make install
+sudo ldconfig
+```
 
+> 💡 If CMake complains it “Failed to detect numpy”, pass the interpreter/include explicitly:
+> ```bash
+> cmake .. \
+>   -DPYTHON_EXECUTABLE="$(which python)" \
+>   -DNUMPY_INCLUDE_DIR="$(python -c 'import numpy; print(numpy.get_include())')"
+> ```
+
+---
+
+## 6️⃣ 🧩 Verify Pinocchio ↔ NumPy compatibility
+
+```bash
+python - <<'EOF'
+import numpy, pinocchio
+print("NumPy:", numpy.__version__)
+print("Pinocchio:", pinocchio.__version__, " @ ", pinocchio.__file__)
+EOF
+```
+
+Expected: **NumPy 1.26.x**; Pinocchio loads from `/opt/ros/humble/...`.  
+If NumPy got bumped to 2.x by a stray install, **force**:
+```bash
+pip install --force-reinstall "numpy==1.26.4"
+```
+
+---
+
+## 7️⃣ 🧪 Python deps for ROSIDL (inside Conda)
+
+> Why: ROSIDL runs with **your Conda Python**, not the system Python. Missing these will break message generation (`empy`, `catkin_pkg`, `lark-parser`, `pyyaml`).
+
+```bash
+pip install "empy==3.3.4" "catkin-pkg==1.1.0" "lark-parser==0.12.0" "pyyaml==6.0.1"
+```
+
+---
+
+## 8️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
+
+Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch used `inekf_odom.py` instead of the installed name.
+
+### 8.1 Fix `CMakeLists.txt` (install Python executables)
+Edit `~/kalman_filter/src/go2_odometry/CMakeLists.txt` and make sure you have:
+
+```cmake
+# === Install Python executables ===
+install(PROGRAMS scripts/fake_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME fake_odom)
+install(PROGRAMS scripts/dumb_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME dumb_odom)
+install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} RENAME mocap_base_pose)
+install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom)
+```
+
+> 🧠 Why `RENAME`? ROS expects **executable files without `.py`** in `lib/${PROJECT_NAME}`.  
+> The rename gives you `.../lib/go2_odometry/inekf_odom` which launch files can call directly.
+
+### 8.2 Fix the launch file name
+Edit `~/kalman_filter/src/go2_odometry/launch/go2_inekf_odometry.launch.py` and change:
+
+```python
+executable="inekf_odom.py",
+```
+
+to:
+
+```python
+executable="inekf_odom",
+```
+
+---
+
+## 9️⃣ 🧱 Build the workspace
+
+```bash
+# Always source ROS 2 before colcon
+source /opt/ros/humble/setup.bash
+
+cd ~/kalman_filter
+colcon build --symlink-install
+```
+
+> If you previously built with wrong settings, do a clean rebuild:
+> ```bash
+> rm -rf build install log
+> colcon build --symlink-install
+> ```
+
+---
+
+## 🔟 🔍 Sanity checks
+
+```bash
+# Source ROS 2 + your workspace
+source /opt/ros/humble/setup.bash
+source ~/kalman_filter/install/setup.bash
+
+# List packages
+ros2 pkg list | grep go2
+ros2 pkg list | grep unitree
+```
+
+Expected:  
+`go2_description`, `go2_odometry` and `unitree_api`, `unitree_go`, `unitree_hg`, `unitree_ros2_example`.
+
+> You may see a harmless note like:
+> ```
+> not found: ".../install/inekf/share/inekf/local_setup.bash"
+> ```
+> That’s fine — **inekf** is a C++ library, not a ROS 2 Python package.
+
+---
+
+## 1️⃣1️⃣ 🧪 Quick run: **fake odom** (debug)
+
+> Why: validate TF, URDF, and topic wiring in seconds.
+
+**If you are inside a Conda env, pre-load the system libstdc++** or `rclpy` may complain about `GLIBCXX`:
+```bash
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+```
+
+Launch:
+```bash
+ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=fake base_height:=0.30
+```
+
+In another terminal:
+```bash
+source /opt/ros/humble/setup.bash
+source ~/kalman_filter/install/setup.bash
+ros2 topic list
+ros2 topic echo /odometry/filtered
+```
+
+You should see fixed poses at `(x=0, y=0, z=base_height)` and TF streams.
+
+---
+
+## 1️⃣2️⃣ 🚀 Run the **real filter** (InEKF)
+
+```bash
+# In Conda: keep this to avoid GLIBCXX mismatches with rclpy
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
+```
+
+**What this launch does:**
+- Starts `go2_inekf_odometry.launch.py`
+- Runs `inekf_odom` (Python node wrapping InEKF C++ core)
+- Starts `state_converter_node` (converts Unitree custom msgs → standard ROS)
+- Runs `robot_state_publisher` (URDF → TF stream)
+
+**You should see topics:**
+```
+/lowstate
+/imu
+/joint_states
+/odometry/filtered
+/tf
+/tf_static
+```
+
+> 🔭 **RViz tip:** fixed frame = `odom`; add `TF`, `Odometry` (`/odometry/filtered`), and `IMU`.
+
+---
+
+## 🧯 Troubleshooting & common pitfalls
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| `GLIBCXX_3.4.30 not found` when running `ros2` in Conda | Conda’s libstdc++ overrides system | `export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6` |
+| Pinocchio segfault / `_ARRAY_API not found` | NumPy 2.x incompatible with old C++ bindings | `pip install --force-reinstall "numpy==1.26.4"` |
+| `Failed to detect numpy` during InEKF CMake | eigenpy can’t find NumPy headers in this Python | `cmake .. -DPYTHON_EXECUTABLE=$(which python) -DNUMPY_INCLUDE_DIR=$(python -c 'import numpy; print(numpy.get_include())')` |
+| `No module named 'em'/'catkin_pkg'/'lark'` during `colcon build` | ROSIDL runs with Conda Python; modules missing | `pip install empy catkin-pkg lark-parser pyyaml` |
+| `executable 'inekf_odom.py' not found` | Launch expects `.py`; CMake installs without `.py` | **Fix launch** → `executable="inekf_odom"` **and** ensure CMake `install(PROGRAMS ... RENAME inekf_odom)` |
+| KDL warning about inertia on root link | KDL limitation with URDF root inertias | Harmless; ignore or add a dummy base if you want a clean console |
+
+---
+
+## ✅ Final checklist
+
+- [ ] Conda env with **Python 3.10** and **NumPy 1.26.4**
+- [ ] `cmake >= 3.22` for invariant-ekf
+- [ ] `python3-pinocchio` (apt) available
+- [ ] `empy`, `catkin-pkg`, `lark-parser`, `pyyaml` inside **Conda**
+- [ ] `go2_odometry` **CMake install** fixed (Python executables with `RENAME`)
+- [ ] Launch **fixed** (`executable="inekf_odom"`)
+- [ ] `colcon build --symlink-install` completes
+- [ ] Fake odom runs
+- [ ] InEKF runs with `odom_type:=use_full_odom`
+
+---
+
+## 📝 Rationale: why the `LD_PRELOAD`?
+
+When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols). Pre-loading the system libstdc++:
+
+```bash
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+```
+
+tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
+
+---
+
+## 🎉 You’re done!
+
+You now have a **reproducible, documented** InEKF setup for Unitree Go2 with ROS 2 Humble.  
+If you want, create a tiny `test_go2_odometry.sh` that sources ROS 2 + your workspace, sets `LD_PRELOAD`, and launches the filter in one go — handy for demos and CI.
+
+Happy state estimation 🧪🤖!
