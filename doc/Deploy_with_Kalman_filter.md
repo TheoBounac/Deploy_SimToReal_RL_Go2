@@ -1,5 +1,5 @@
 # 🧭 Go2 Odometry — **Invariant EKF (InEKF) Full Setup Guide**
-*A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations, commands, and troubleshooting.*  
+*A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations and commands.
 
 > ✅ This guide is intentionally verbose and annotated so you can **understand why** each step matters and quickly debug if something goes off-track.
 
