@@ -115,17 +115,17 @@ Open `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` with :
 ```bash
 nano ~/kalman_filter/src/invariant-ekf/CMakeLists.txt
 ```
-<p align="center">
-<img src="cmake.png" width="900">
-<br>
-</p>
 
 And set :
 ```cmake
 cmake_minimum_required(VERSION 3.22)
 ```
+<p align="center">
+<img src="cmake.png" width="900">
+<br>
+</p>
 
-
+---
 Confirm NumPy is visible to CMake (it will be queried via eigenpy during config):
 ```bash
 python -c "import numpy; print(numpy.__version__)"  # must print 1.26.4
@@ -134,6 +134,7 @@ If not (Troubleshooting), just reinstall numpy :
 ```bash
 pip install --upgrade numpy==1.26.4
 ```
+---
 
 Now build & install :
 ```bash
