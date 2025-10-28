@@ -183,7 +183,7 @@ install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} REN
 install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom.py)
 ```
 <p align="center">
-<img src="cmake2.png" width="1000">
+<img src="cmake2.png" width="1100">
 <br>
 </p>
 
