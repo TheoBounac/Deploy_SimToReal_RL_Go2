@@ -1,5 +1,11 @@
 # <h2 align="center">Go2 Odometry — **Invariant EKF (InEKF) Full Setup Guide**</h2>
 
+ <p align="center">
+  <img src="preskal.png" width="1000">
+  <br>
+ </p>
+
+ 
 **A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations and commands.**
 
 ---
