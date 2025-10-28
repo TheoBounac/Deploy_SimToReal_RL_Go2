@@ -156,19 +156,8 @@ If NumPy got bumped to 2.x by a stray install, **force**:
 pip install --force-reinstall "numpy==1.26.4"
 ```
 
-
 ---
-## 7️⃣ 🧪 Python deps for ROSIDL (inside Conda)
-
-> Why: ROSIDL runs with **your Conda Python**, not the system Python. Missing these will break message generation (`empy`, `catkin_pkg`, `lark-parser`, `pyyaml`).
-
-```bash
-pip install "empy==3.3.4" "catkin-pkg==1.1.0" "lark-parser==0.12.0" "pyyaml==6.0.1"
-```
-
-
----
-## 8️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
+## 7️⃣ 🩹 **Required fixes** for `go2_odometry` (InEKF executable)
 
 Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch used `inekf_odom.py` instead of the installed name.
 
@@ -201,7 +190,7 @@ executable="inekf_odom",
 
 
 ---
-## 9️⃣ 🧱 Build the workspace
+## 8️⃣ 🧱 Build the workspace
 
 ```bash
 # Always source ROS 2 before colcon
@@ -219,7 +208,7 @@ colcon build --symlink-install
 
 
 ---
-## 🔟 🔍 Sanity checks
+## 9️⃣ 🔍 Sanity checks
 
 ```bash
 # Source ROS 2 + your workspace
@@ -242,7 +231,7 @@ Expected:
 
 
 ---
-## 1️⃣1️⃣ 🧪 Quick run: **fake odom** (debug)
+## 🔟 🧪 Quick run: **fake odom** (debug)
 
 > Why: validate TF, URDF, and topic wiring in seconds.
 
@@ -268,7 +257,7 @@ You should see fixed poses at `(x=0, y=0, z=base_height)` and TF streams.
 
 
 ---
-## 1️⃣2️⃣ 🚀 Run the **real filter** (InEKF)
+## 1️⃣1️⃣ 🚀 Run the **real filter** (InEKF)
 
 ```bash
 # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
