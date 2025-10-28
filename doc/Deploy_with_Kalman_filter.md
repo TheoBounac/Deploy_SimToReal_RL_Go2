@@ -261,7 +261,7 @@ ros2 topic echo /odometry/filtered
 ```
 
 <p align="center">
-<img src="fake.png" width="500">
+<img src="fake.png" width="1100">
 <br>
 </p>
 
