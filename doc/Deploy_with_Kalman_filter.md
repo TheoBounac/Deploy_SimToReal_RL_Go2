@@ -49,7 +49,7 @@ pip install colcon-common-extensions
 ---
 ## 2️⃣ 🤖 Ensure ROS 2 Humble is installed & sourced
 
-> Why: all `ros2`, `colcon`, and `ament` commands must see the ROS environment.
+Install [ROS 2 Humble](https://docs.ros.org/en/jazzy/Installation.html)
 
 ```bash
 # run this in every new terminal session where you use ROS 2
