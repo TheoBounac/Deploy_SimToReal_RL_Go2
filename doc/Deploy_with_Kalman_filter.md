@@ -115,6 +115,10 @@ Open `~/kalman_filter/src/invariant-ekf/CMakeLists.txt` with :
 ```bash
 nano ~/kalman_filter/src/invariant-ekf/CMakeLists.txt
 ```
+<p align="center">
+<img src="cmake.png" width="500">
+<br>
+</p>
 
 And set :
 ```cmake
@@ -165,7 +169,7 @@ pip install --force-reinstall "numpy==1.26.4"
 
 Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch uses `inekf_odom.py` instead of the installed name.
 
-To fix that, pen `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
+To fix that, open `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
 ```bash
 nano ~/kalman_filter/src/go2_odometry/CMakeLists.txt 
 ```
@@ -178,6 +182,10 @@ install(PROGRAMS scripts/dumb_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME du
 install(PROGRAMS scripts/mocap_base_pose.py  DESTINATION lib/${PROJECT_NAME} RENAME mocap_base_pose.py)
 install(PROGRAMS scripts/inekf_odom.py  DESTINATION lib/${PROJECT_NAME} RENAME inekf_odom.py)
 ```
+<p align="center">
+<img src="cmake2.png" width="500">
+<br>
+</p>
 
 
 ---
@@ -215,6 +223,12 @@ ros2 pkg list | grep unitree
 Expected:  
 `go2_description`, `go2_odometry` and `unitree_api`, `unitree_go`, `unitree_hg`, `unitree_ros2_example`.
 
+<p align="center">
+<img src="verif.png" width="500">
+<br>
+</p>
+
+
 > You may see a harmless note like:
 > ```
 > not found: ".../install/inekf/share/inekf/local_setup.bash"
@@ -244,6 +258,12 @@ source ~/kalman_filter/install/setup.bash
 ros2 topic list
 ros2 topic echo /odometry/filtered
 ```
+
+<p align="center">
+<img src="fake.png" width="500">
+<br>
+</p>
+
 
 You should see fixed poses at `(x=0, y=0, z=base_height)` and TF streams.
 
