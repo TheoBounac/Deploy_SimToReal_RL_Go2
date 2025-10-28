@@ -2,7 +2,7 @@
 *A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations and commands.
 
 ---
-## ✨ What you’ll get
+## Overview
 
 - A clean Conda environment (Python 3.10) **compatible with ROS 2 Humble**.
 - The **Invariant EKF** library compiled and available system-wide.
