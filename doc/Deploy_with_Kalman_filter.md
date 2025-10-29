@@ -324,6 +324,15 @@ After processing with the Kalman filter, the **pose** and **velocity estimations
 Additionally, the `/robot_description` topic provides the pose and orientation of each part of the robot, allowing real-time visualization of the Go2 model in **RViz2**.
 
 
+**Connect the robot with ethernet**
+
+The last step is to connect the robot and your PC with ethernet. Turn on the robot and connect it to your PC using an Ethernet cable.
+
+Go to Settings/Network and then IPv4. Fill the gaps as follows :
+<p align="center">
+ <img src="ipv4.png" width="500">
+ <br>
+</p>
 
 ---
 ## 🧯 Troubleshooting & common pitfalls
