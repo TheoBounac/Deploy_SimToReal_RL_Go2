@@ -330,7 +330,7 @@ The last step is to connect the robot and your PC with ethernet. Turn on the rob
 
 Go to Settings/Network and then IPv4. Fill the gaps as follows :
 <p align="center">
- <img src="ipv4.png" width="800">
+ <img src="ipv4.png" width="700">
  <br>
 </p>
 
