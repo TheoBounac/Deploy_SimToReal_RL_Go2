@@ -293,7 +293,7 @@ source ~/kalman_filter/install/setup.bash #
 ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 ```
 
-**What this launch does :**
+**What this launch does**
 - Starts `go2_inekf_odometry.launch.py`
 - Runs `inekf_odom` (Python node wrapping InEKF C++ core)
 - Starts `state_converter_node` (converts Unitree custom msgs → standard ROS)
