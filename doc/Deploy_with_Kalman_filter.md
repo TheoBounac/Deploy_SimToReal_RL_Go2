@@ -313,7 +313,10 @@ ros2 topic list
 
 
  
-> 🔭 **RViz tip:** fixed frame = `odom`; add `TF`, `Odometry` (`/odometry/filtered`), and `IMU`.
+> 🔭 The data are collected from the robot through the `/lowstate` topic provided by the Unitree ROS 2 interface.  
+After processing with the Kalman filter, the **pose** and **velocity estimations** are published on the `/odometry/filtered` topic.  
+Additionally, the `/robot_description` topic provides the pose and orientation of each part of the robot, allowing real-time visualization of the Go2 model in **RViz2**.
+
 
 
 ---
