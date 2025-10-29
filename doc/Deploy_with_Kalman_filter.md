@@ -373,6 +373,18 @@ You should normally see your robot moving in real time :
  <img src="sososo.png" width="800">
  <br>
 </p>
+
+You can collect the pose and velocity estimation of the filter with :
+
+Open a new terminal
+
+```bash
+source /opt/ros/humble/setup.bash         # Make sure it is sourced
+source ~/kalman_filter/install/setup.bash #
+
+ros2 topic list
+ros2 topic echo /odometry/filtered
+```
 ---
 ## 🧯 Troubleshooting & common pitfalls
 
