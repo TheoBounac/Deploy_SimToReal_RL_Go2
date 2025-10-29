@@ -316,7 +316,7 @@ You should see :
 **You should see topics**
 
 Open a new terminal and just type :
-```
+```bash
 ros2 topic list
 ```
 
@@ -342,6 +342,17 @@ Go to Settings/Network and then IPv4. Fill the gaps as follows :
  <br>
 </p>
 
+
+---
+## 1️⃣2️⃣ 🖥️ Visualize with **Rviz2**
+
+Open a new terminal and launch rviz2 with :
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/go2_ws/install/setup.bash
+rviz2
+```
 ---
 ## 🧯 Troubleshooting & common pitfalls
 
