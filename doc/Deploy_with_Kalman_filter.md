@@ -307,7 +307,7 @@ ros2 topic list
 ```
 
  <p align="center">
-  <img src="topic.png" width="600">
+  <img src="topic.png" width="450">
   <br>
  </p>
 
