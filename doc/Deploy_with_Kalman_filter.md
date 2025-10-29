@@ -292,7 +292,13 @@ source ~/kalman_filter/install/setup.bash #
 
 ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 ```
+You should see :
 
+ <p align="center">
+  <img src="filtre.png" width="1000">
+  <br>
+ </p>
+ 
 **What this launch does**
 - Starts `go2_inekf_odometry.launch.py`
 - Runs `inekf_odom` (Python node wrapping InEKF C++ core)
@@ -311,10 +317,6 @@ ros2 topic list
   <br>
  </p>
 
- <p align="center">
-  <img src="filtre.png" width="1000">
-  <br>
- </p>
 
  
 > 🔭 The data are collected from the robot through the `/lowstate` topic provided by the Unitree ROS 2 interface.  
