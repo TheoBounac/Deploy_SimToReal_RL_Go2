@@ -312,7 +312,7 @@ ros2 topic list
  </p>
 
  <p align="center">
-  <img src="filtre.png" width="450">
+  <img src="filtre.png" width="1000">
   <br>
  </p>
 
