@@ -365,6 +365,14 @@ And make sure to be on FixedFrame: `odom` and DescriptionTopic: `/robot_descrpti
  <img src="soso.png" width="300">
  <br>
 </p>
+
+
+You should normally see your robot moving in real time :
+
+<p align="center">
+ <img src="sososo.png" width="300">
+ <br>
+</p>
 ---
 ## 🧯 Troubleshooting & common pitfalls
 
