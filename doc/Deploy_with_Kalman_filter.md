@@ -300,6 +300,7 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 - Runs `robot_state_publisher` (URDF → TF stream)
 
 **You should see topics **
+
 Open a new terminal and just type :
 ```
 ros2 topic list
