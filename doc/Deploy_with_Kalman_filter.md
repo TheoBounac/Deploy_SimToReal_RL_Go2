@@ -296,13 +296,12 @@ Go to Settings/Network and then IPv4. Fill the gaps as follows :
 
 
 
+And launch with :
+
 ```bash
 # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-```
-And launched with :
 
-```bash
 source /opt/ros/humble/setup.bash         # Make sure it is sourced
 source ~/kalman_filter/install/setup.bash #
 
