@@ -306,6 +306,13 @@ Open a new terminal and just type :
 ros2 topic list
 ```
 
+ <p align="center">
+  <img src="topic.png" width="600">
+  <br>
+ </p>
+
+
+ 
 > 🔭 **RViz tip:** fixed frame = `odom`; add `TF`, `Odometry` (`/odometry/filtered`), and `IMU`.
 
 
