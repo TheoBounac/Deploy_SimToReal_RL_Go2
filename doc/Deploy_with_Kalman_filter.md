@@ -353,6 +353,18 @@ source /opt/ros/humble/setup.bash
 source ~/go2_ws/install/setup.bash
 rviz2
 ```
+
+To add the robot, just click on `add` then `RobotModel` :
+<p align="center">
+ <img src="so.png" width="500">
+ <br>
+</p>
+
+And make sure to be on FixedFrame: `odom` and DescriptionTopic: `/robot_descrption` (provided by the kalman filter) :
+<p align="center">
+ <img src="soso.png" width="500">
+ <br>
+</p>
 ---
 ## 🧯 Troubleshooting & common pitfalls
 
