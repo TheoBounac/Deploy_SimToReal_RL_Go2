@@ -370,7 +370,7 @@ And make sure to be on FixedFrame: `odom` and DescriptionTopic: `/robot_descrpti
 You should normally see your robot moving in real time :
 
 <p align="center">
- <img src="sososo.png" width="300">
+ <img src="sososo.png" width="800">
  <br>
 </p>
 ---
