@@ -254,13 +254,17 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 Launch:
 ```bash
+source /opt/ros/humble/setup.bash         # Make sure it is sourced
+source ~/kalman_filter/install/setup.bash #
+
 ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=fake base_height:=0.30
 ```
 
 In another terminal:
 ```bash
-source /opt/ros/humble/setup.bash
-source ~/kalman_filter/install/setup.bash
+source /opt/ros/humble/setup.bash         # Make sure it is sourced
+source ~/kalman_filter/install/setup.bash #
+
 ros2 topic list
 ros2 topic echo /odometry/filtered
 ```
@@ -279,24 +283,26 @@ You should see fixed poses at `(x=0, y=0, z=base_height)` and the odometry/filte
 ```bash
 # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+```
+And launched with :
+
+```bash
+source /opt/ros/humble/setup.bash         # Make sure it is sourced
+source ~/kalman_filter/install/setup.bash #
 
 ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 ```
 
-**What this launch does:**
+**What this launch does :**
 - Starts `go2_inekf_odometry.launch.py`
 - Runs `inekf_odom` (Python node wrapping InEKF C++ core)
 - Starts `state_converter_node` (converts Unitree custom msgs → standard ROS)
 - Runs `robot_state_publisher` (URDF → TF stream)
 
-**You should see topics:**
+**You should see topics :**
+
 ```
-/lowstate
-/imu
-/joint_states
-/odometry/filtered
-/tf
-/tf_static
+ros2 topic list
 ```
 
 > 🔭 **RViz tip:** fixed frame = `odom`; add `TF`, `Odometry` (`/odometry/filtered`), and `IMU`.
