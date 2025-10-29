@@ -311,6 +311,10 @@ ros2 topic list
   <br>
  </p>
 
+ <p align="center">
+  <img src="filtre.png" width="450">
+  <br>
+ </p>
 
  
 > 🔭 The data are collected from the robot through the `/lowstate` topic provided by the Unitree ROS 2 interface.  
