@@ -299,8 +299,8 @@ ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
 - Starts `state_converter_node` (converts Unitree custom msgs → standard ROS)
 - Runs `robot_state_publisher` (URDF → TF stream)
 
-**You should see topics :**
-
+**You should see topics **
+Open a new terminal and just type :
 ```
 ros2 topic list
 ```
