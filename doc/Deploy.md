@@ -121,7 +121,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    Go to Settings/Network and then IPv4. Fill the gaps as follows :
    
    <p align="center">
-    <img src="ipv4.png" width="800">
+    <img src="ipv4.png" width="700">
     <br>
    </p>
 4. Collect the network interface
@@ -132,7 +132,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ifconfig
    ```
    <p align="center">
-    <img src="net.png" width="600">
+    <img src="net.png" width="700">
     <br>
    </p>
    
