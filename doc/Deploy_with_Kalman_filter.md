@@ -247,7 +247,15 @@ Expected:
 
 > Why: validate TF, URDF, and topic wiring in seconds.
 
-**If you are inside a Conda env, pre-load the system libstdc++** or `rclpy` may complain about `GLIBCXX`:
+**If you are inside a Conda env, pre-load the system libstdc++** or `rclpy` may complain about `GLIBCXX`. When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols).
+
+So, make sure to always pre-load the system libstdc++:
+
+```bash
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+```
+
+tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
 ```bash
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 ```
@@ -345,17 +353,6 @@ Go to Settings/Network and then IPv4. Fill the gaps as follows :
 | `No module named 'em'/'catkin_pkg'/'lark'` during `colcon build` | ROSIDL runs with Conda Python; modules missing | `pip install empy catkin-pkg lark-parser pyyaml` |
 | `executable 'inekf_odom.py' not found` | Launch expects `.py`; CMake installs without `.py` | **Fix launch** → `executable="inekf_odom"` **and** ensure CMake `install(PROGRAMS ... RENAME inekf_odom)` |
 | KDL warning about inertia on root link | KDL limitation with URDF root inertias | Harmless; ignore or add a dummy base if you want a clean console |
-
-
-## 📝 Rationale: why the `LD_PRELOAD`?
-
-When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols). Pre-loading the system libstdc++:
-
-```bash
-export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-```
-
-tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
 
 
 ---
