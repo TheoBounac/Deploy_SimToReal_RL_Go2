@@ -247,7 +247,7 @@ Expected:
 
 > Why: validate TF, URDF, and topic wiring in seconds.
 
-**If you are inside a Conda env, pre-load the system libstdc++** or `rclpy` may complain about `GLIBCXX`. When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols).
+**If you are inside a Conda env, pre-load the system libstdc++** or `rclpy` may complain about `GLIBCXX`. When you run ROS 2 Python nodes from a **Conda environment**, Conda provides its own `libstdc++.so.6`. ROS 2 Humble’s wheels (`rclpy`, others) were built against the **system** libstdc++ (newer GLIBCXX symbols). It is necessary to tell the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
 
 So, make sure to always pre-load the system libstdc++:
 
@@ -255,10 +255,6 @@ So, make sure to always pre-load the system libstdc++:
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 ```
 
-tells the dynamic loader to **prefer the system runtime**, preventing the `GLIBCXX_*` family of errors. It’s the cleanest fix when you want Conda + ROS 2 to coexist.
-```bash
-export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-```
 
 Launch:
 ```bash
