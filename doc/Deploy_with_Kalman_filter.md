@@ -356,13 +356,13 @@ rviz2
 
 To add the robot, just click on `add` then `RobotModel` :
 <p align="center">
- <img src="so.png" width="500">
+ <img src="so.png" width="600">
  <br>
 </p>
 
 And make sure to be on FixedFrame: `odom` and DescriptionTopic: `/robot_descrption` (provided by the kalman filter) :
 <p align="center">
- <img src="soso.png" width="500">
+ <img src="soso.png" width="300">
  <br>
 </p>
 ---
