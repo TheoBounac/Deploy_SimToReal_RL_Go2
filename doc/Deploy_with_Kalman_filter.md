@@ -288,6 +288,18 @@ You should see fixed poses at `(x=0, y=0, z=base_height)` and the odometry/filte
 ---
 ## 1️⃣1️⃣ 🚀 Run the **real filter** (InEKF)
 
+**Connect the robot with ethernet**
+
+First, you must connect the robot and your PC with ethernet. Turn on the robot and connect it to your PC using an Ethernet cable.
+
+Go to Settings/Network and then IPv4. Fill the gaps as follows :
+<p align="center">
+ <img src="ipv4.png" width="700">
+ <br>
+</p>
+
+
+
 ```bash
 # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
@@ -330,17 +342,6 @@ ros2 topic list
 > 🔭 The data are collected from the robot through the `/lowstate` topic provided by the Unitree ROS 2 interface.  
 After processing with the Kalman filter, the **pose** and **velocity estimations** are published on the `/odometry/filtered` topic.  
 Additionally, the `/robot_description` topic provides the pose and orientation of each part of the robot, allowing real-time visualization of the Go2 model in **RViz2**.
-
-
-**Connect the robot with ethernet**
-
-The last step is to connect the robot and your PC with ethernet. Turn on the robot and connect it to your PC using an Ethernet cable.
-
-Go to Settings/Network and then IPv4. Fill the gaps as follows :
-<p align="center">
- <img src="ipv4.png" width="700">
- <br>
-</p>
 
 
 ---
