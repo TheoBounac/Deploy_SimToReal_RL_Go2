@@ -165,6 +165,9 @@ Make sure the robot is standing in an open area, free of obstacles or people nea
 3. Press the **Start** button on the remote to make the robot stand up.  
 4. Press the **A** button to activate the trained model.
 
+⚠️ **Emergency Stop**  
+If the robot behaves unexpectedly or becomes dangerous, **press the Select button immediately**.  
+The model will be stopped, and the robot will safely fold its legs.
 
 
 
