@@ -35,7 +35,7 @@ This guide explains, step by step, how to set up the complete environment requir
 
 |  **Component** |  **Recommended Setup** |
 |------------------|--------------------------|
-| **Ubuntu** | 22.04 LTS (Jammy) |
+| **Ubuntu** | 22.04 LTS  |
 | **ROS 2** | Humble — installed via `apt` in `/opt/ros/humble` |
 | **Conda** | Miniconda |
 | **Python** | 3.10  |
