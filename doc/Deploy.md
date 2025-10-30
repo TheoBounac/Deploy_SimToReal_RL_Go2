@@ -178,19 +178,19 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
 5. Run deploy script  :
    
-  Navigate to `deploy_real`:
+    Navigate to `deploy_real`:
+    
+     ```bash
+     cd ~/Deploy_SimToReal_Go2/deploy_real
+     ```
   
-   ```bash
-   cd ~/Deploy_SimToReal_Go2/deploy_real
-   ```
-
-   Run `deploy_real_isaaclab.py `with your network interface :
-   
-   ```bash
-   export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
-   source ~/kalman_filter/install/setup.bash
-   python deploy_real_isaaclab.py enp0s31f6 go2.yaml
-   ```
+     Run `deploy_real_isaaclab.py `with your network interface :
+     
+     ```bash
+     export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+     source ~/kalman_filter/install/setup.bash
+     python deploy_real_isaaclab.py enp0s31f6 go2.yaml
+     ```
 
    ---
 🦾 **Deployment Sequence**
