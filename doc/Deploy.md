@@ -100,7 +100,7 @@ pip install -e .
 At this point, your folder should look like this :
 
  <p align="center">
-  <img src="plan.png" width="600">
+  <img src="plan.png" width="700">
   <br>
  </p>
  
