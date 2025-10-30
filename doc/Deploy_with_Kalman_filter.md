@@ -173,7 +173,8 @@ pip install --force-reinstall "numpy==1.26.4"
 ---
 ## 7️⃣ 🔧 **Required fixes** for `go2_odometry` (InEKF executable)
 
-Recent versions of `go2_odometry` may **not install the Python nodes** where ROS expects them, and the launch uses `inekf_odom.py` instead of the installed name.
+By default, the go2_odometry package installs its Python nodes without the .py extension.
+However, the launch files (like go2_inekf_odometry.launch.py) try to run executables ending with .py, which causes a “file not found” error during launch.
 
 To fix that, open `~/kalman_filter/src/go2_odometry/CMakeLists.txt` with :
 ```bash
