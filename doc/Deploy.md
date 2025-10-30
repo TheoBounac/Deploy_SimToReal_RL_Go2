@@ -147,6 +147,10 @@ Once the installation is complete, follow these steps to launch an RL model on t
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
+
+⚠️ **Safety Notice:**  
+Make sure the robot is standing in an open area, free of obstacles or people nearby.
+   
 4. Run `deploy_real_isaaclab.py` with your network interface :
    ```bash
    export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
