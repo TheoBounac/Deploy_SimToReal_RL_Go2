@@ -142,17 +142,49 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <br>
    </p>
    
-4. Navigate to `deploy_real`:
+⚠️ **Safety Notice:**  
+From now on, make sure the robot is standing in an open area, free of obstacles or people nearby.
+
+4. Activate the `kalman_filter` (be sure to complete [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before) :
+   
+   Open a new terminal
+   
+   Activate env conda :
+   ```bash
+   conda activate env go2_odometry_env
+   ```
+  Source :
+
+  ```bash
+  # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
+  export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+  
+  source /opt/ros/humble/setup.bash         # Make sure it is sourced
+  source ~/kalman_filter/install/setup.bash #
+  source /opt/ros/humble/setup.bash         #
+  ```
+   And launch with :
+
+  ```bash
+  ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
+  ```
+
+
+
+
+5. Run deploy script  :
+   
+  Navigate to `deploy_real`:
+  
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
 
-⚠️ **Safety Notice:**  
-Make sure the robot is standing in an open area, free of obstacles or people nearby.
+   Run `deploy_real_isaaclab.py `with your network interface :
    
-5. Run `deploy_real_isaaclab.py` with your network interface :
    ```bash
    export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+   source ~/kalman_filter/install/setup.bash
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
    ```
 
