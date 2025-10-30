@@ -149,7 +149,7 @@ Confirm NumPy is visible to CMake (it will be queried via eigenpy during config)
 ```bash
 python -c "import numpy; print(numpy.__version__)"  # must print 1.26.4
 ```
-If not (Troubleshooting), just reinstall numpy :
+If not (troubleshooting), just reinstall numpy :
 ```bash
 pip install --upgrade numpy==1.26.4
 ```
