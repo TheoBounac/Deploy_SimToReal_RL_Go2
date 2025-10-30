@@ -2,10 +2,6 @@
 
 **A step-by-step README to reproduce the exact working setup we used (ROS 2 Humble, Conda, Unitree ROS 2, go2_odometry, invariant-ekf), with explanations and commands.**
 
- <p align="center">
-  <img src="preskalm.png" width="1100">
-  <br>
- </p>
 
 <table align="center" style="border-collapse:collapse;">
 <th style="width:50%; text-align:center;">
@@ -383,23 +379,10 @@ And make sure to be on FixedFrame: `odom` and DescriptionTopic: `/robot_descrpti
 
 You should normally see your robot moving in real time :
 
-<table align="center" style="border-collapse:collapse;">
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Deploy on real robot Go2</div>
-</th>
-<th style="width:50%; text-align:center;">
-  <div style="display:inline-block; width:200px;">Real time Kalman filter</div>
-</th>
-
-  <tr>
-    <td style="width:50%; text-align:center;">
-      <img src="gogu2.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-    <td style="width:50%; text-align:center;">
-      <img src="gogu.gif" style="width:100%; display:block; margin:auto;">
-    </td>
-  </tr>
-</table>
+ <p align="center">
+  <img src="preskalm.png" width="1100">
+  <br>
+ </p>
 You can collect the pose and velocity estimation of the filter with :
 
 Open a new terminal
