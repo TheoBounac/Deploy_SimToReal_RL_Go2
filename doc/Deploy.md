@@ -131,7 +131,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <img src="ipv4.png" width="700">
     <br>
    </p>
-4. Collect the network interface
+3. Collect the network interface
 
    Type in the terminal, and collect the adress :
 
@@ -143,7 +143,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <br>
    </p>
    
-3. Navigate to `deploy_real`:
+4. Navigate to `deploy_real`:
    ```bash
    cd ~/Deploy_SimToReal_Go2/deploy_real
    ```
@@ -151,7 +151,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
 ⚠️ **Safety Notice:**  
 Make sure the robot is standing in an open area, free of obstacles or people nearby.
    
-4. Run `deploy_real_isaaclab.py` with your network interface :
+5. Run `deploy_real_isaaclab.py` with your network interface :
    ```bash
    export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
    python deploy_real_isaaclab.py enp0s31f6 go2.yaml
