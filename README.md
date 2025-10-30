@@ -60,21 +60,20 @@ The project combines **Python + ROS 2 + IsaacLab + Kalman filter (Inria Paris)**
 
 ```
 Deploy_SimToReal_Go2/
-│
-├── deploy_real/                # Deployment scripts for Go2
-│   ├── config.py
-│   ├── deploy_real_isaaclab.py
-│   └── node_kalman.py
-│
-├── pre_train/                  # Pre-trained RL models (policies)
-│   ├── policy_rough.pt
-│   └── policy_rough_2.pt
-│
-├── unitree_sdk2_python/        # SDK Unitree
-│
-├── kalman_filter/              # Kalman Filter for Go2 (Inria Paris)
-│
-└── README.md                 
+   ├── deploy_real/                # Deployment scripts for Go2
+   │   ├── config.py
+   │   ├── deploy_real_isaaclab.py
+   │   └── node_kalman.py
+   │
+   ├── pre_train/                  # Pre-trained RL models (policies)
+   │   ├── policy_rough.pt
+   │   └── policy_rough_2.pt
+   │
+   ├── unitree_sdk2_python/        # SDK Unitree
+   │
+   └── README.md                 
+
+kalman_filter/                     # Kalman Filter for Go2 (Inria Paris)
 
 Isaaclab
 ```
