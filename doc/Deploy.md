@@ -141,9 +141,11 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <img src="net.png" width="700">
     <br>
    </p>
-   
+
+---
 ⚠️ **Safety Notice:**  
 From now on, make sure the robot is standing in an open area, free of obstacles or people nearby.
+---
 
 4. Activate the `kalman_filter` (be sure to complete [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before) :
    
@@ -153,21 +155,22 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
    ```bash
    conda activate env go2_odometry_env
    ```
-  Source :
+   Source :
 
-  ```bash
-  # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
-  export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+   ```bash
+   # In Conda: keep this to avoid GLIBCXX mismatches with rclpy
+   export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
   
-  source /opt/ros/humble/setup.bash         # Make sure it is sourced
-  source ~/kalman_filter/install/setup.bash #
-  source /opt/ros/humble/setup.bash         #
-  ```
+   source /opt/ros/humble/setup.bash         # Make sure it is sourced
+   source ~/kalman_filter/install/setup.bash #
+   source /opt/ros/humble/setup.bash         #
+   ```
+   
    And launch with :
 
-  ```bash
-  ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
-  ```
+   ```bash
+   ros2 launch go2_odometry go2_odometry_switch.launch.py odom_type:=use_full_odom
+   ```
 
 
 
