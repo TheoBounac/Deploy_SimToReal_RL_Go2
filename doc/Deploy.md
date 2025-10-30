@@ -28,9 +28,9 @@ Deploy_SimToReal_Go2/
 │
 ├── unitree_sdk2_python/        # SDK Unitree
 │
-├── kalman_filter/              # Kalman Filter for Go2 (Inria Paris)
+└── README.md
 │
-└── README.md                 
+└── kalman_filter/              # Kalman Filter for Go2 (Inria Paris)          
 ```
 
 ---
