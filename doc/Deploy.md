@@ -15,7 +15,7 @@
 ## 📁 Architecture of this section
 
 ```
-deploy_go2/
+Deploy_SimToReal_Go2/
 │
 ├── deploy_real/                # Deployment scripts for Go2
 │   ├── config.py
