@@ -97,6 +97,13 @@ cd unitree_sdk2_python
 pip install -e .
 ```
 
+At this point, your folder should look like this :
+
+ <p align="center">
+  <img src="plan.png" width="600">
+  <br>
+ </p>
+ 
 ---
 ###  4️⃣ Clone Go2_odometry
 Install the Kalman filter for the Go2 : [Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
