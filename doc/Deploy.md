@@ -162,8 +162,8 @@ Make sure the robot is standing in an open area, free of obstacles or people nea
 
 1. Run the command to launch `deploy_real_isaaclab.py` with the `go2.yaml` configuration.  
 2. The robot will exit its default mode and lie down.  
-3. Press the **Start** button on the remote to make the robot stand up.  
-4. Press the **A** button to activate the trained model.
+3. Press the `**Start**` button on the remote to make the robot stand up.  
+4. Press the `**A**` button to activate the trained model.
 
 ⚠️ **Emergency Stop**  
 If the robot behaves unexpectedly or becomes dangerous, **press the Select button immediately**.  
