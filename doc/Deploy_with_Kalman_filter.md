@@ -55,7 +55,7 @@ pip install colcon-common-extensions
 ---
 ## 2️⃣ 🤖 Ensure ROS 2 Humble is installed & sourced
 
-Install [ROS 2 Humble](https://docs.ros.org/en/jazzy/Installation.html). Then, add to path :
+Install [ROS 2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html). Then, add to path :
 
 ```bash
 # run this in every new terminal session where you use ROS 2
