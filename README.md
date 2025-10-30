@@ -59,7 +59,7 @@ The project combines **Python + ROS 2 + IsaacLab + Kalman filter (Inria Paris)**
 ## 📁 Architecture
 
 ```
-Deploy_SimToReal_Go2/
+-Deploy_SimToReal_Go2/
    ├── deploy_real/                # Deployment scripts for Go2
    │   ├── config.py
    │   ├── deploy_real_isaaclab.py
@@ -73,9 +73,9 @@ Deploy_SimToReal_Go2/
    │
    └── README.md                 
 
-kalman_filter/                     # Kalman Filter for Go2 (Inria Paris)
+-kalman_filter/                     # Kalman Filter for Go2 (Inria Paris)
 
-Isaaclab
+-Isaaclab
 ```
 
 ---
