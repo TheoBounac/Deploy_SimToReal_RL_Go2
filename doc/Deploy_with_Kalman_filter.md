@@ -288,6 +288,8 @@ ros2 topic list
 ros2 topic echo /odometry/filtered
 ```
 
+You should see 2 terminals like this :
+
 <p align="center">
 <img src="fake.png" width="1100">
 <br>
