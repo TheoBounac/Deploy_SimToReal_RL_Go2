@@ -7,6 +7,23 @@
   <br>
  </p>
 
+<table align="center" style="border-collapse:collapse;">
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">Deploy on real robot Go2</div>
+</th>
+<th style="width:50%; text-align:center;">
+  <div style="display:inline-block; width:200px;">Real time Kalman filter</div>
+</th>
+
+  <tr>
+    <td style="width:50%; text-align:center;">
+      <img src="gogu2.gif" style="width:100%; display:block; margin:auto;">
+    </td>
+    <td style="width:50%; text-align:center;">
+      <img src="gogu.gif" style="width:100%; display:block; margin:auto;">
+    </td>
+  </tr>
+</table>
  
 
 
