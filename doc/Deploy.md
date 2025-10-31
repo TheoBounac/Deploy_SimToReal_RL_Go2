@@ -82,7 +82,7 @@ pip install -r requirements.txt
 
 ---
 ###  3️⃣ Clone SDK Unitree
-`unitree_sdk2py` is a Python library that enables direct communication with Unitree robots.
+`Unitree_sdk2py` is a Python library that enables direct communication with Unitree robots.
 It plays a crucial role in this project, allowing the system to collect sensor data from the robot and send velocity and motor commands in real time.
 
 Clone the repository using Git :
