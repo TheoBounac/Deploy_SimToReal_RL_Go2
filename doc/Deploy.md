@@ -155,7 +155,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
    
    Activate env conda :
    ```bash
-   conda activate env go2_odometry_env
+   conda activate go2_odometry_env
    ```
    Source :
 
@@ -178,6 +178,13 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
 
 5. Run deploy script  :
+
+   Open a new terminal
+   
+   Activate env conda :
+   ```bash
+   conda activate env_isaaclab
+   ```
    
     Navigate to `deploy_real`:
     
@@ -192,6 +199,8 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
      source ~/kalman_filter/install/setup.bash
      python deploy_real_isaaclab.py enp0s31f6 go2.yaml
      ```
+
+     You should have someting like this :
 
    ---
 🦾 **Deployment Sequence**
