@@ -202,7 +202,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
      You should have someting like this :
      <p align="center">
-      <img src="sisi.png" width="700">
+      <img src="sisi.png" width="800">
       <br>
     </p>
 
