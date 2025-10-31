@@ -118,11 +118,11 @@ Here is a full tutorial on how to install this library :
 
 Once the installation is complete, follow these steps to launch an RL model on the Go2 robot.
 
-1. Activate conda env :
+1. **Activate conda env** 
    ```bash
    conda activate env_isaaclab
    ```
-2. Connect the robot with ethernet
+2. **Connect the robot with ethernet**
    
    Turn on the robot and connect it to your PC using an Ethernet cable.
    Go to Settings/Network and then IPv4. Fill the gaps as follows :
@@ -131,7 +131,7 @@ Once the installation is complete, follow these steps to launch an RL model on t
     <img src="ipv4.png" width="700">
     <br>
    </p>
-3. Collect the network interface
+3. **Collect the network interface**
 
    Type in the terminal, and collect the adress :
 
@@ -149,7 +149,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
 ---
 
-4. Activate the `kalman_filter` (be sure to complete [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before) :
+4. **Activate the `kalman_filter` (be sure to complete [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before)**
    
    Open a new terminal
    
@@ -177,7 +177,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
 
 
-5. Run deploy script  :
+5. **Run deploy script**  
 
    Open a new terminal
    
@@ -206,7 +206,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
       <br>
     </p>
 
-6. Visualize on Rviz2
+6. **Visualize on Rviz2**
    
    Open a new terminal and launch rviz2 with :
     
