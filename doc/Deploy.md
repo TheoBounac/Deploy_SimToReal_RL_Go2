@@ -233,7 +233,7 @@ If the robot behaves unexpectedly or becomes dangerous, **press the `Select` but
 The model will be stopped, and the robot will safely fold its legs.  
 
 </div>
----
+
 
 
 
