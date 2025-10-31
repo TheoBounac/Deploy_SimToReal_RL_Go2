@@ -1,4 +1,4 @@
-<h2 align="center">🚀 Installing the Custom Isaac Lab (Theo Bounac’s Fork)</h2>
+<h2 align="center">🚀 Part 1 : Train in Isaaclab</h2>
 
 This version of **Isaac Lab** is a custom fork of NVIDIA Isaac Lab,  
 including several improvements and modifications for the **Go2 Sim-to-Real pipeline** 🐾.  
