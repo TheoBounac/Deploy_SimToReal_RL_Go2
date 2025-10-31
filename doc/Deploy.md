@@ -207,7 +207,8 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
     </p>
 
 6. Visualize on Rviz2
-       Open a new terminal and launch rviz2 with :
+   
+   Open a new terminal and launch rviz2 with :
     
     ```bash
     source /opt/ros/humble/setup.bash
