@@ -223,11 +223,12 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
       <br>
     </p>
 4. Press the **`A`** button to activate the trained model.
-
-⚠️ **Emergency Stop**  
+   
+<p align="center">
+⚠️ **Emergency Stop**  ⚠️
 If the robot behaves unexpectedly or becomes dangerous, **press the `Select` button immediately**.  
 The model will be stopped, and the robot will safely fold its legs.
-
+</p>
 
 
 
