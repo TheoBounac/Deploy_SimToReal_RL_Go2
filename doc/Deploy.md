@@ -149,7 +149,7 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
 ---
 
-4. **Activate the `kalman_filter` (be sure to complete [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before)**
+4. **Activate the `kalman_filter` (be sure to have fully completed [📘 How to use  **Kalman filter (Inria Paris)** for real-time control and sensor/command integration](doc/Deploy_with_Kalman_filter.md) before)**
    
    Open a new terminal
    
