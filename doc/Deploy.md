@@ -210,9 +210,18 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
 
    ---
 🦾 **Deployment Sequence**
-1. Run the command to launch `deploy_real_isaaclab.py` with the `go2.yaml` configuration.  
-2. The robot will exit its default mode and lie down.  
-3. Press the **`Start`** button on the remote to make the robot stand up.  
+1. Run the command to launch `deploy_real_isaaclab.py` with the `go2.yaml` configuration. This file contains important configurations values for the deployment with the Go2.
+2. The robot will exit its default mode and lie down smoothly.
+        <p align="center">
+      <img src="robcouche.jpg" width="600">
+      <br>
+    </p>
+
+3. Press the **`Start`** button on the remote to make the robot stand up.
+         <p align="center">
+      <img src="robdebout.jpg" width="600">
+      <br>
+    </p>
 4. Press the **`A`** button to activate the trained model.
 
 ⚠️ **Emergency Stop**  
