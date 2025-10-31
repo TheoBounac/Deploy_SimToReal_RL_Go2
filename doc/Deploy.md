@@ -82,7 +82,8 @@ pip install -r requirements.txt
 
 ---
 ###  3️⃣ Clone SDK Unitree
-unitree_sdk2py is a library used for communication with **Unitree** robots in python. 
+`unitree_sdk2py` is a Python library that enables direct communication with Unitree robots.
+It plays a crucial role in this project, allowing the system to collect sensor data from the robot and send velocity and motor commands in real time.
 
 Clone the repository using Git :
 ```bash
@@ -105,7 +106,7 @@ At this point, your folder should look like this :
  
 ---
 ###  4️⃣ Clone Go2_odometry
-Install the Kalman filter for the Go2 : [Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file)
+Install the Kalman filter for the Go2 : [Github Inria Paris Go2_odometry](https://github.com/inria-paris-robotics-lab/go2_odometry?tab=readme-ov-file). It provides an estimation of the robot’s velocity, which is one of the input features of the neural network used for control.
 
 Here is a full tutorial on how to install this library :
 
