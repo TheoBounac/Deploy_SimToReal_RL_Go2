@@ -35,40 +35,30 @@ conda create -n env_isaaclab python=3.11
 conda activate env_isaaclab
 ```
 
-Update pip:
-```bash
-pip install --upgrade pip
-```
 
 ---
 
 ##  2️⃣ Clone Theo Bounac’s Isaac Lab Fork
 
-Install Isaaclab with this fork :
-
-### HTTPS
-```bash
-https://github.com/TheoBounac/Isaaclab_deploy
-cd IsaacLab
-```
-
-*(optional, for developers with SSH keys)*  
-```bash
-git clone git@github.com:TheoBounac/IsaacLab.git
-cd IsaacLab
-```
+Install Isaaclab with this fork : [Isaaclab_deploy](https://github.com/TheoBounac/Isaaclab_deploy)
 
 
 
-## 🦾 6️⃣ Train a Robot (Example)
+
+
+
+
+
+## 🦾 6️⃣ Train 
 
 Start training an RL agent directly inside Isaac Lab:
 
 ```bash
-./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Velocity-Rough-Go2-v0 --headless
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Velocity-Rough-Unitree-Go2-v0 --num_envs=40
 ```
 
-This uses Theo Bounac’s custom Go2 configuration and environment.
+You can go headless mode with `--headless`.
+This uses our custom Go2 configuration and environment.
 
 ---
 
