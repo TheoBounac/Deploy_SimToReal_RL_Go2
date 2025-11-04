@@ -2,6 +2,18 @@
 
 This version of **Isaac Lab** is a custom fork of NVIDIA Isaac Lab, including several improvements and modifications for the **Go2 Sim-to-Real pipeline** 🐾. It installs **exactly like the official Isaac Lab**, only the **clone URL** changes. Main modifications are in the definitions of rewards and their weights, and a foot contact sensor has been added to detect when each foot is in contact with the ground.
 
+
+---
+## ⚙️ System Requirements for this section
+
+|  Component |  Recommended Version |
+|--------------|------------------------|
+| Nvidia Graphic cards | |
+| **Ubuntu** | 22.04 LTS |
+| **Python** | 3.10+ |
+
+
+
 ---
 
 ## 🧩 1️⃣ Create the Python Environment
