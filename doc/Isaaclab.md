@@ -16,7 +16,7 @@ This version of **Isaac Lab** is a custom fork of NVIDIA Isaac Lab, including se
 
 ---
 
-## 🧩 1️⃣ Create the Python Environment
+##  1️⃣ Create the Python Environment
 
 Creating a dedicated Python environment is strongly recommended to avoid dependency conflicts and keep your setup reproducible.
 
@@ -42,29 +42,13 @@ pip install --upgrade pip
 
 ---
 
-## 💻 2️⃣ Install Isaac Sim (pip package)
+##  2️⃣ Clone Theo Bounac’s Isaac Lab Fork
 
-Isaac Sim can be installed directly via pip (requires **GLIBC 2.35+**).  
-If you encounter compatibility issues on Ubuntu 20.04 (GLIBC 2.31), use the binary version instead.
-
-```bash
-pip install "isaacsim[all,extscache]==5.1.0" --extra-index-url https://pypi.nvidia.com
-```
-
-Install PyTorch (adapt the CUDA version to your GPU):
-```bash
-pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
-```
-
----
-
-## 🧠 3️⃣ Clone Theo Bounac’s Isaac Lab Fork
-
-Replace the NVIDIA repository link with the custom fork URL 👇
+Install Isaaclab with this fork :
 
 ### HTTPS
 ```bash
-git clone https://github.com/TheoBounac/IsaacLab.git
+https://github.com/TheoBounac/Isaaclab_deploy
 cd IsaacLab
 ```
 
