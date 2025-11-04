@@ -44,12 +44,7 @@ Install Isaaclab with this fork : [Isaaclab_deploy](https://github.com/TheoBouna
 
 
 
-
-
-
-
-
-## 🦾 6️⃣ Train 
+## 🦾 3️⃣ Train 
 
 Start training an RL agent directly inside Isaac Lab:
 
@@ -62,23 +57,15 @@ This uses our custom Go2 configuration and environment.
 
 ---
 
-## 🧱 7️⃣ Notes for Users of This Fork
 
-🔹 This fork includes custom files for **Go2 locomotion and Sim2Real adaptation**:
-- Modified task configs → `flat_env_cfg.py`, `rough_env_cfg.py`
-- Enhanced reward functions → `rewards.py`
-- Updated RL scripts → `train.py`, `play.py`
-- New PPO agent config → `sb3_rough_ppo_cfg.yaml`
+## 🦾 ️4️⃣ Play
 
-🔹 All other features, tools, and commands remain identical to the **official Isaac Lab**.
+You can try your trained RL agent directly inside Isaac Lab:
 
----
-
-
+```bash
+./isaaclab.sh -p scripts/reinforcement_learning/rsl_rl/play.py --task=Isaac-Velocity-Rough-Unitree-Go2-v0 --num_envs=10
+```
 
 ---
 
 <h3 align="center">✨ Enjoy training and deploying your Go2 robot with Isaac Lab! ✨</h3>
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDl0aHk0eTBrM2wwd3pqenQ1b3F1c3J5eDlxaHd0YjFwaDUxMG03YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MFQ8TnxgU3JZm/giphy.gif" width="400">
-</p>
