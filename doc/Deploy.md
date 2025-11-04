@@ -239,6 +239,11 @@ From now on, make sure the robot is standing in an open area, free of obstacles 
    ---
 🦾 **Deployment Sequence**
 1. Run the command to launch `deploy_real_isaaclab.py` with the `go2.yaml` configuration. This file contains important configurations values for the deployment with the Go2.
+
+   <p align="center">
+      <img src="config.png" width="300">
+      <br>
+    </p>
 2. The robot will exit its default mode and lie down smoothly.
         <p align="center">
       <img src="robcouche.jpg" width="300">
