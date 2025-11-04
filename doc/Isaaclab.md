@@ -74,38 +74,7 @@ git clone git@github.com:TheoBounac/IsaacLab.git
 cd IsaacLab
 ```
 
----
 
-## ⚙️ 4️⃣ Install Isaac Lab Extensions
-
-On Linux:
-```bash
-sudo apt install cmake build-essential
-./isaaclab.sh --install    # or  ./isaaclab.sh -i
-```
-
-You can also install only a specific framework (e.g. RSL-RL):
-```bash
-./isaaclab.sh --install rsl_rl
-```
-
-Available options:
-```
-all, rl_games, rsl_rl, sb3, skrl, robomimic, none
-```
-
----
-
-## 🧪 5️⃣ Verify the Installation
-
-```bash
-./isaaclab.sh -p scripts/tutorials/00_sim/create_empty.py
-```
-
-✅ You should see a **black simulation window** — if yes, the installation worked! 🎉  
-Exit with `Ctrl + C` in your terminal.
-
----
 
 ## 🦾 6️⃣ Train a Robot (Example)
 
@@ -131,36 +100,7 @@ This uses Theo Bounac’s custom Go2 configuration and environment.
 
 ---
 
-## 🔄 8️⃣ Keeping Your Fork Up to Date (Optional)
 
-If you want to sync future updates from NVIDIA’s official Isaac Lab:
-
-```bash
-# Add the original repository as upstream
-git remote add upstream https://github.com/NVIDIA-Omniverse/IsaacLab.git
-
-# Fetch new commits
-git fetch upstream
-
-# Merge them into your fork
-git merge upstream/main
-```
-
-This way, your fork stays aligned with new Isaac Lab releases  
-while preserving your Go2-specific improvements.
-
----
-
-## 💡 Summary
-
-Only **one line** differs from the official installation:
-
-```diff
-- git clone https://github.com/NVIDIA-Omniverse/IsaacLab.git
-+ git clone https://github.com/TheoBounac/IsaacLab.git
-```
-
-Everything else — environment setup, simulator installation, and workflows — remains **exactly the same** ✅
 
 ---
 
