@@ -43,7 +43,7 @@ conda activate env_isaaclab
 Install Isaaclab with this fork : [Isaaclab_deploy](https://github.com/TheoBounac/Isaaclab_deploy)
 
 
-
+---
 ## 🦾 3️⃣ Train 
 
 Start training an RL agent directly inside Isaac Lab:
